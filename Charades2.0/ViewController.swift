@@ -5,6 +5,7 @@
 //  Created by Claire E. Lutz on 4/19/18.
 //  Copyright © 2018 John Hersey High School. All rights reserved.
 // Claire, Amy, Ryan
+//  Rachel 
 
 import UIKit
 
