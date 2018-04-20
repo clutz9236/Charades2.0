@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Animals"/>
                                 <connections>
-                                    <segue destination="2eu-k9-sre" kind="show" id="ZFI-Dn-Cm2"/>
+                                    <segue destination="A6Z-wc-ALp" kind="show" id="WcB-QB-hle"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Pick a Category!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GRg-KU-Vix">
@@ -56,6 +56,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="key-WO-OTg">
+            <objects>
+                <viewController id="A6Z-wc-ALp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hh4-7K-cTb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ufa-0S-rCW">
