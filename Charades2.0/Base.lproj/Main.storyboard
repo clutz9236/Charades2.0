@@ -42,6 +42,9 @@
                                 <rect key="frame" x="168" y="617" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rules"/>
+                                <connections>
+                                    <segue destination="2eu-k9-sre" kind="show" id="zGd-nv-bjJ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="charades pic" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-5X-Hqv">
                                 <rect key="frame" x="67" y="121" width="240" height="128"/>
