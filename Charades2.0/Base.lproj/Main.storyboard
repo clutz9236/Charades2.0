@@ -43,7 +43,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rules"/>
                                 <connections>
-                                    <segue destination="2eu-k9-sre" kind="show" id="rs5-f3-yh7"/>
+                                    <segue destination="2eu-k9-sre" kind="show" identifier="results segue" id="zGd-nv-bjJ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="charades pic" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-5X-Hqv">
