@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="key-WO-OTg">
             <objects>
-                <viewController id="A6Z-wc-ALp" sceneMemberID="viewController">
+                <viewController id="A6Z-wc-ALp" customClass="GameViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hh4-7K-cTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
