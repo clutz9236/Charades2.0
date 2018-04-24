@@ -9,12 +9,16 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        button.setTitle("start game", for: .normal)
 
-      let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
-        // Do any additional setup after loading the view.
+        
     }
  
     override func didReceiveMemoryWarning() {
@@ -22,15 +26,10 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
 
 }
