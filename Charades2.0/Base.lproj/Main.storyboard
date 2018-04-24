@@ -67,13 +67,24 @@
                     <view key="view" contentMode="scaleToFill" id="hh4-7K-cTb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygy-5C-tcD">
+                                <rect key="frame" x="164" y="394" width="46" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kYY-uY-hxN" kind="unwind" unwindAction="unwindToFirstViewControllerWithUnwindSegue:" id="WV0-bP-avj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kYY-uY-hxN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="126"/>
+            <point key="canvasLocation" x="1141.5999999999999" y="125.4872563718141"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ufa-0S-rCW">
