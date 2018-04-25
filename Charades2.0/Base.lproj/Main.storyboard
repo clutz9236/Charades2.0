@@ -69,15 +69,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygy-5C-tcD">
-                                <rect key="frame" x="164" y="394" width="46" height="150"/>
+                                <rect key="frame" x="49" y="395" width="281" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Start Game"/>
                                 <connections>
+                                    <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="rid-sZ-osE"/>
                                     <segue destination="kYY-uY-hxN" kind="unwind" unwindAction="unwindToFirstViewControllerWithUnwindSegue:" id="WV0-bP-avj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJB-Qn-9Qb">
-                                <rect key="frame" x="96" y="221" width="176" height="184"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJB-Qn-9Qb">
+                                <rect key="frame" x="49" y="221" width="240" height="184"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -87,9 +89,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
+                    <connections>
+                        <outlet property="startGameButtonOutlet" destination="ygy-5C-tcD" id="Tby-rF-p6Q"/>
+                        <outlet property="wordLabelOutlet" destination="uJB-Qn-9Qb" id="huE-Vk-4zl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kYY-uY-hxN" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="6es-pg-8xz"/>
             </objects>
             <point key="canvasLocation" x="1141.5999999999999" y="125.4872563718141"/>
         </scene>

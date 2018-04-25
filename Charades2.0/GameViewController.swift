@@ -10,16 +10,30 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-  
-  
+    @IBOutlet weak var startGameButtonOutlet: UIButton!
+    
+    @IBOutlet weak var wordLabelOutlet: UILabel!
+    
+    @IBOutlet weak var stackedView: UIStackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        stackedView.isHidden = true
+        wordLabelOutlet.isHidden = true
          let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"] 
         
     }
 
   
+    @IBAction func startGameButton(_ sender: UIButton) {
+        startGameButtonOutlet.isHidden = true
+        wordLabelOutlet.isHidden = false
+        stackedView.isHidden = false
+    }
+    
+    
     @IBAction func unwindToFirstViewController(unwindSegue: UIStoryboardSegue) {
         
     }
