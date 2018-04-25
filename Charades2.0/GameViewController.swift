@@ -9,20 +9,20 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
+    let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
   
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"] 
+        
         
     }
 
-  
-    @IBAction func unwindToFirstViewController(unwindSegue: UIStoryboardSegue) {
+    func newWord () {
         
     }
+   
   
     
     
