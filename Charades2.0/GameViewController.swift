@@ -39,12 +39,13 @@ class GameViewController: UIViewController {
         
         
     }
-
-
+    
+  
    
     @IBAction func startGameButton(_ sender: Any) {
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
+        gameLabel.text = ("\(AnimalWords[0])")
     }
     
     
