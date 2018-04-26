@@ -101,6 +101,7 @@
                         <outlet property="TimerLabel" destination="HLJ-Yh-sAg" id="ET0-Bx-UEc"/>
                         <outlet property="gameLabel" destination="uJB-Qn-9Qb" id="NRu-VA-9Om"/>
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
+                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="AIp-Rx-Y5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
     
+    @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
+    
     var counter = 45
     var myTimer: Timer!
     
@@ -29,6 +31,7 @@ class GameViewController: UIViewController {
         
     }
 
+    
 
    
     @IBAction func startGameButton(_ sender: Any) {
