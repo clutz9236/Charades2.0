@@ -32,7 +32,16 @@ class GameViewController: UIViewController {
     }
 
     
-
+  
+    @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        let selectedPoint = sender.location(in: self.view)
+        
+        for animal in AnimalWords {
+            gameLabel.text = AnimalWords.first
+        }
+        
+    }
+    
    
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
