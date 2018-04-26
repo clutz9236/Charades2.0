@@ -45,6 +45,7 @@ class GameViewController: UIViewController {
         }
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
+        gameLabel.text = ("\(AnimalWords[0])")
     }
     
     
