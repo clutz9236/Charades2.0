@@ -39,13 +39,11 @@ class GameViewController: UIViewController {
         
     }
 
-    func newWord () {
-        
-    }
+
    
     @IBAction func startGameButton(_ sender: Any) {
         startGameOutlet.isHidden = true
-        gameLabel.isHidden = true
+        gameLabel.isHidden = false
     }
     
     
