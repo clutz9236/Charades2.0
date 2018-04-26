@@ -16,8 +16,12 @@ class ViewController: UIViewController {
         
     }
 
- 
+    @IBAction func animalButton(_ sender: UIButton) {
+    }
+    
 
-
+    @IBAction func rulesButton(_ sender: UIButton) {
+    }
+    
 }
 

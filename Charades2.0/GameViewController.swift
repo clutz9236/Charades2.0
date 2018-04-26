@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameLabel: UILabel!
     
     
-    let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
+   let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
   
   
     override func viewDidLoad() {
@@ -24,13 +24,11 @@ class GameViewController: UIViewController {
         
     }
 
-    func newWord () {
-        
-    }
+
    
     @IBAction func startGameButton(_ sender: Any) {
         startGameOutlet.isHidden = true
-        gameLabel.isHidden = true
+        gameLabel.isHidden = false
     }
     
     
