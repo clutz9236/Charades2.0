@@ -12,6 +12,10 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var startGameOutlet: UIButton!
     @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var TimerLabel: UILabel!
+    
+    var counter = 45
+    var myTimer: Timer!
     
     
     let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
@@ -19,6 +23,19 @@ class GameViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        TimerLabel.text = "\(counter)"
+        
+        myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            self.counter -= 1
+            self.TimerLabel.text = "\(self.counter)"
+            
+            if self.counter == 0 {
+                self.myTimer.invalidate()
+                
+            }
+        }
+        
         gameLabel.isHidden = true
         
         
