@@ -9,12 +9,17 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    @IBOutlet weak var startGameOutlet: UIButton!
+    @IBOutlet weak var gameLabel: UILabel!
+    
+    
     let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
   
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        gameLabel.isHidden = true
         
         
     }
@@ -23,7 +28,11 @@ class GameViewController: UIViewController {
         
     }
    
-  
+    @IBAction func startGameButton(_ sender: Any) {
+        startGameOutlet.isHidden = true
+        gameLabel.isHidden = true
+    }
+    
     
     
     override func didReceiveMemoryWarning() {

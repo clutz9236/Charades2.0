@@ -74,7 +74,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
-                                    <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="rid-sZ-osE"/>
+                                    <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="Jwo-eq-hk6"/>
                                     <segue destination="kYY-uY-hxN" kind="unwind" unwindAction="unwindToFirstViewControllerWithUnwindSegue:" id="WV0-bP-avj"/>
                                 </connections>
                             </button>
@@ -90,7 +90,9 @@
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
                     <connections>
+                        <outlet property="gameLabel" destination="uJB-Qn-9Qb" id="NRu-VA-9Om"/>
                         <outlet property="startGameButtonOutlet" destination="ygy-5C-tcD" id="Tby-rF-p6Q"/>
+                        <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
                         <outlet property="wordLabelOutlet" destination="uJB-Qn-9Qb" id="huE-Vk-4zl"/>
                     </connections>
                 </viewController>
