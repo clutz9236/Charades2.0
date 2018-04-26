@@ -22,7 +22,16 @@ class GameViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
+        gameLabel.isHidden = true
+        
+        
+    }
+
+
+   
+    @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
         
         myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
@@ -34,15 +43,6 @@ class GameViewController: UIViewController {
                 
             }
         }
-        
-        gameLabel.isHidden = true
-        
-        
-    }
-
-
-   
-    @IBAction func startGameButton(_ sender: Any) {
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
     }
