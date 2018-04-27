@@ -21,25 +21,31 @@ class GameViewController: UIViewController {
     
    let AnimalWords =  ["llama", "dog", "mockingbird", "fly", "parrot", "sheep", "coyote", "lion", "zebra", "cheetah", "polar bear", "bear", "owl", "tiger", "husky", "panda", "monkey", "penguin", "peacock", "fox", "dolphin", "deer", "chicken", "turkey", "pig", "fish", "rhino", "cow", "frog", "bunny", "wolf", "porcupine", "whale", "kangaroo"]
     
+
+    
   
     override func viewDidLoad() {
         super.viewDidLoad()
        
         
         gameLabel.isHidden = true
-        
+     
         
     }
 
-    
+
+  
   
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
-        let selectedPoint = sender.location(in: self.view)
         
-        for animal in AnimalWords {
-            gameLabel.text = AnimalWords.first
-        }
+        var animalIterator = AnimalWords.makeIterator()
+            if sender.state == .ended {
+            var animal = animalIterator.next()
+                    gameLabel.text = animal
         
+            }
+        
+    
     }
     
    
@@ -57,7 +63,7 @@ class GameViewController: UIViewController {
         }
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
-        gameLabel.text = ("\(AnimalWords[0])")
+       
     }
     
     
