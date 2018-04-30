@@ -10,9 +10,11 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var tapStackView: UIStackView!
     @IBOutlet weak var startGameOutlet: UIButton!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
+    var countTimesTapped = 0
     
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
     
@@ -29,7 +31,7 @@ class GameViewController: UIViewController {
        
         
         gameLabel.isHidden = true
-     
+        tapGestureOutlet.isEnabled = false
         
     }
 
@@ -37,17 +39,19 @@ class GameViewController: UIViewController {
   
   
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
-        
-        var animalIterator = AnimalWords.makeIterator()
             if sender.state == .ended {
-            var animal = animalIterator.next()
-                    gameLabel.text = animal
-        
+            countTimesTapped += 1
+            newWord()
             }
-        
-    
     }
     
+    func newWord() {
+        if AnimalWords.count > countTimesTapped {
+            gameLabel.text = ("\(AnimalWords[countTimesTapped])")
+        } else {
+            gameLabel.text = "done"
+        }
+    }
    
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
@@ -61,9 +65,12 @@ class GameViewController: UIViewController {
                 
             }
         }
+        gameLabel.text = ("\(AnimalWords[0])")
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
-       
+        view.isUserInteractionEnabled = true
+        tapGestureOutlet.isEnabled = true
+        tapStackView.addGestureRecognizer(tapGestureOutlet)
     }
     
     
