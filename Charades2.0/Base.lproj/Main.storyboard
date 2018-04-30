@@ -108,6 +108,7 @@
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
                         <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="AIp-Rx-Y5i"/>
                         <outlet property="tapStackView" destination="jIS-gM-PTJ" id="rzn-Cy-Bq0"/>
+                        <segue destination="CnK-l0-gfj" kind="show" id="OLn-LD-FdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
