@@ -63,8 +63,10 @@ class GameViewController: UIViewController {
             
             if self.counter == 0 {
                 self.myTimer.invalidate()
+                self.performSegue(withIdentifier: "ResultsSegue", sender: nil)
                 
             }
+            
         }
         gameLabel.text = ("\(AnimalWords[0])")
         startGameOutlet.isHidden = true
