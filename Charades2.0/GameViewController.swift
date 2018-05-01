@@ -48,7 +48,7 @@ class GameViewController: UIViewController {
     
     func newWord() {
         if AnimalWords.count > countTimesTapped {
-            gameLabel.text = ("\(AnimalWords[countTimesTapped])")
+            gameLabel.text = AnimalWords[Int(arc4random_uniform(UInt32(AnimalWords.count)))]
         } else {
             gameLabel.text = "done"
         }
