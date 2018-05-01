@@ -64,6 +64,7 @@ class GameViewController: UIViewController {
             
             if self.counter == 0 {
                 self.myTimer.invalidate()
+                self.performSegue(withIdentifier: "ResultsSegue", sender: nil)
                 
             }
             
