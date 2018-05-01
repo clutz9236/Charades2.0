@@ -64,6 +64,7 @@ class GameViewController: UIViewController {
                 self.myTimer.invalidate()
                 
             }
+            
         }
         gameLabel.text = ("\(AnimalWords[0])")
         startGameOutlet.isHidden = true
