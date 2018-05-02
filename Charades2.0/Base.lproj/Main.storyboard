@@ -43,6 +43,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Celebrities"/>
+                                <connections>
+                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="celebritiesSegue" id="aci-mG-uvN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
                                 <rect key="frame" x="117" y="420" width="141" height="81"/>
@@ -195,4 +198,7 @@
     <resources>
         <image name="charades pic" width="630" height="630"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="aci-mG-uvN"/>
+    </inferredMetricsTieBreakers>
 </document>
