@@ -55,6 +55,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekp-mE-Jcn"/>
                     </view>
+                    <connections>
+                        <outlet property="celebrityGameLabel" destination="wKq-kb-FKs" id="FOW-IX-40x"/>
+                        <outlet property="celebrityStartGameButton" destination="6p8-Iy-pMY" id="jVv-jz-PMV"/>
+                        <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="vq3-UO-od5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="now-ES-281" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
