@@ -10,7 +10,9 @@ import UIKit
 
 class CelebritiesViewController: UIViewController {
 
-    
+  
+    @IBOutlet weak var celebrityRightStackView: UIStackView!
+    @IBOutlet weak var celebrityWrongStackView: UIStackView!
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
@@ -19,27 +21,22 @@ class CelebritiesViewController: UIViewController {
     
     
     var counter = 45
+    var celebrityMyTimer: Timer!
+    var celebrityRight = 0
+    var celebrityWrong = 0
+    var celebrityCountTimesTapped = 0
     
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis"]
+  let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        celebrityGameLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
 
 }

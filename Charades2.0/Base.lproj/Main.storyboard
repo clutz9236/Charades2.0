@@ -74,6 +74,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="celebrityRightStackView" destination="neg-Vl-kNr" id="mvQ-T5-PUB"/>
+                        <outlet property="celebrityWrongStackView" destination="SQ3-OQ-MMC" id="JXB-Ib-uYS"/>
                         <segue destination="CnK-l0-gfj" kind="show" id="GSU-Bd-8Y6"/>
                     </connections>
                 </viewController>
