@@ -17,7 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="VQg-W5-cd7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-Wm-kg8">
+                                <rect key="frame" x="104" y="97" width="167" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKq-kb-FKs">
+                                <rect key="frame" x="59" y="294" width="256" height="158"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p8-Iy-pMY">
+                                <rect key="frame" x="76" y="494" width="222" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="6gN-vN-THg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TlN-Wm-kg8" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" constant="33" id="Aw6-la-8kg"/>
+                            <constraint firstItem="TlN-Wm-kg8" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" constant="104" id="JHf-IZ-fp7"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="TlN-Wm-kg8" secondAttribute="trailing" constant="104" id="bZk-a9-ugf"/>
+                            <constraint firstItem="wKq-kb-FKs" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="cQw-xD-nGo"/>
+                            <constraint firstItem="wKq-kb-FKs" firstAttribute="top" secondItem="TlN-Wm-kg8" secondAttribute="bottom" constant="35" id="wti-kr-FYe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ekp-mE-Jcn"/>
                     </view>
                 </viewController>
