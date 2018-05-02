@@ -11,6 +11,14 @@ import UIKit
 class CelebritiesViewController: UIViewController {
 
     
+    @IBOutlet weak var celebrityStartGameButton: UIButton!
+    @IBOutlet weak var celebrityGameLabel: UILabel!
+    @IBOutlet weak var celebrityTimerLabel: UILabel!
+    var countTimesTapped = 0
+    
+    
+    
+    var counter = 45
     
   
     
