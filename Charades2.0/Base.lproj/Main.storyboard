@@ -46,6 +46,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" constant="33" id="Aw6-la-8kg"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" constant="104" id="JHf-IZ-fp7"/>
@@ -54,9 +55,16 @@
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="top" secondItem="TlN-Wm-kg8" secondAttribute="bottom" constant="35" id="wti-kr-FYe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekp-mE-Jcn"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1qf-mQ-X7H" appends="YES" id="mJm-jd-2cv"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <segue destination="CnK-l0-gfj" kind="show" id="GSU-Bd-8Y6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="now-ES-281" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1qf-mQ-X7H"/>
             </objects>
             <point key="canvasLocation" x="1134" y="-543"/>
         </scene>
@@ -248,4 +256,7 @@
     <resources>
         <image name="charades pic" width="630" height="630"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GSU-Bd-8Y6"/>
+    </inferredMetricsTieBreakers>
 </document>
