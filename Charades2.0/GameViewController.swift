@@ -10,16 +10,19 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet weak var tapStackView: UIStackView!
+    @IBOutlet weak var rightAnswerStack: UIStackView!
     @IBOutlet weak var startGameOutlet: UIButton!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
-    var countTimesTapped = 0
-    
-    @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
+    @IBOutlet weak var wrongAnswerStack: UIStackView!
+    @IBOutlet var rightAnswerTap: UITapGestureRecognizer!
+    @IBOutlet var wrongAnswerTap: UITapGestureRecognizer!
     
     var counter = 45
     var myTimer: Timer!
+    var right = 0
+    var wrong = 0
+    var countTimesTapped = 0
     
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo"]
     
@@ -36,15 +39,25 @@ class GameViewController: UIViewController {
         
     }
 
-
-  
-  
-    @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
-            if sender.state == .ended {
-                countTimesTapped += 1
-                newWord()
-            }
+    @IBAction func rightAnswerTapAction(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            countTimesTapped += 1
+            right += 1
+            newWord()
+        }
     }
+    
+    
+    @IBAction func wrongAnswerTapAction(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            countTimesTapped += 1
+            wrong += 1
+            newWord()
+        }
+    }
+    
+  
+  
     
     func newWord() {
         if AnimalWords.count > countTimesTapped {
@@ -71,7 +84,8 @@ class GameViewController: UIViewController {
         gameLabel.text = ("\(AnimalWords[0])")
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
-        tapStackView.addGestureRecognizer(tapGestureOutlet)
+        rightAnswerStack.addGestureRecognizer(rightAnswerTap)
+        wrongAnswerStack.addGestureRecognizer(wrongAnswerTap)
     }
     
     

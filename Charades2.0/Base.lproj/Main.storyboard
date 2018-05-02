@@ -72,9 +72,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-gM-PTJ">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIS-gM-PTJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygy-5C-tcD">
                                 <rect key="frame" x="76" y="466" width="222" height="89"/>
@@ -104,23 +103,43 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-G6-Y4F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xxd-G6-Y4F" firstAttribute="centerX" secondItem="hh4-7K-cTb" secondAttribute="centerX" id="BfH-kI-N5W"/>
+                            <constraint firstItem="jIS-gM-PTJ" firstAttribute="bottom" secondItem="MDg-wU-V4S" secondAttribute="bottom" id="HRW-SA-myD"/>
+                            <constraint firstItem="jIS-gM-PTJ" firstAttribute="trailing" secondItem="MDg-wU-V4S" secondAttribute="trailing" id="cjO-bi-nW1"/>
+                            <constraint firstItem="xxd-G6-Y4F" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" id="jVI-2V-gFB"/>
+                            <constraint firstItem="jIS-gM-PTJ" firstAttribute="centerX" secondItem="hh4-7K-cTb" secondAttribute="centerX" id="ncB-6D-Gbq"/>
+                            <constraint firstItem="xxd-G6-Y4F" firstAttribute="bottom" secondItem="MDg-wU-V4S" secondAttribute="bottom" id="oyG-e1-XYa"/>
+                            <constraint firstItem="jIS-gM-PTJ" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" id="ur6-y1-g14"/>
+                            <constraint firstItem="xxd-G6-Y4F" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="yIe-ez-6uq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
                     <connections>
                         <outlet property="TimerLabel" destination="HLJ-Yh-sAg" id="ET0-Bx-UEc"/>
                         <outlet property="gameLabel" destination="uJB-Qn-9Qb" id="NRu-VA-9Om"/>
+                        <outlet property="rightAnswerStack" destination="jIS-gM-PTJ" id="P8Z-Tj-tT5"/>
+                        <outlet property="rightAnswerTap" destination="6es-pg-8xz" id="iye-Zu-shZ"/>
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="i9c-Ra-MYi"/>
-                        <outlet property="tapStackView" destination="jIS-gM-PTJ" id="rzn-Cy-Bq0"/>
+                        <outlet property="wrongAnswerStack" destination="xxd-G6-Y4F" id="AaP-Vh-PVn"/>
+                        <outlet property="wrongAnswerTap" destination="CJ4-IZ-vug" id="oon-PF-qwI"/>
                         <segue destination="CnK-l0-gfj" kind="show" identifier="resultsSegue" id="OLn-LD-FdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="6es-pg-8xz">
                     <connections>
-                        <action selector="tapGestureRecognizer:" destination="A6Z-wc-ALp" id="Fmv-A4-0DB"/>
+                        <action selector="rightAnswerTapAction:" destination="A6Z-wc-ALp" id="0GS-66-wZB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CJ4-IZ-vug">
+                    <connections>
+                        <action selector="wrongAnswerTapAction:" destination="A6Z-wc-ALp" id="vp2-m9-viW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
