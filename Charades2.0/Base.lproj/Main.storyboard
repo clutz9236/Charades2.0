@@ -44,14 +44,28 @@
                                     <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="6gN-vN-THg"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-OQ-MMC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neg-Vl-kNr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="SQ3-OQ-MMC" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="0Ym-1o-k3g"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" constant="33" id="Aw6-la-8kg"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="bottom" secondItem="neg-Vl-kNr" secondAttribute="bottom" id="GTL-sl-IG9"/>
+                            <constraint firstItem="neg-Vl-kNr" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="H7I-wP-Fnp"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" constant="104" id="JHf-IZ-fp7"/>
+                            <constraint firstItem="neg-Vl-kNr" firstAttribute="top" secondItem="VQg-W5-cd7" secondAttribute="top" id="Okg-9q-WXz"/>
+                            <constraint firstItem="SQ3-OQ-MMC" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="Xn4-RF-hXg"/>
+                            <constraint firstItem="neg-Vl-kNr" firstAttribute="trailing" secondItem="ekp-mE-Jcn" secondAttribute="trailing" id="ZFE-IL-Kb1"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="TlN-Wm-kg8" secondAttribute="trailing" constant="104" id="bZk-a9-ugf"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="cQw-xD-nGo"/>
+                            <constraint firstItem="SQ3-OQ-MMC" firstAttribute="bottom" secondItem="ekp-mE-Jcn" secondAttribute="bottom" id="fxO-0b-Dj9"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="top" secondItem="TlN-Wm-kg8" secondAttribute="bottom" constant="35" id="wti-kr-FYe"/>
+                            <constraint firstItem="SQ3-OQ-MMC" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="xUY-Th-7Ze"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ekp-mE-Jcn"/>
                     </view>
@@ -63,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="now-ES-281" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="-543"/>
+            <point key="canvasLocation" x="1133.5999999999999" y="-543.77811094452773"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
