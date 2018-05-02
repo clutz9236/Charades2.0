@@ -11,6 +11,21 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="d43-fu-jAt">
+            <objects>
+                <viewController id="CaM-0A-KHK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VQg-W5-cd7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ekp-mE-Jcn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="now-ES-281" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="-543"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Celebrities"/>
                                 <connections>
-                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="celebritiesSegue" id="aci-mG-uvN"/>
+                                    <segue destination="CaM-0A-KHK" kind="show" id="fXb-eh-aAa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
@@ -198,7 +213,4 @@
     <resources>
         <image name="charades pic" width="630" height="630"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="aci-mG-uvN"/>
-    </inferredMetricsTieBreakers>
 </document>
