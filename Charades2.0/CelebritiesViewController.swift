@@ -11,11 +11,13 @@ import UIKit
 class CelebritiesViewController: UIViewController {
 
   
-    @IBOutlet weak var celebrityRightStackView: UIStackView!
-    @IBOutlet weak var celebrityWrongStackView: UIStackView!
+   
+    @IBOutlet weak var tapStack: UIStackView!
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
+    
+    @IBOutlet var celebrityTapGesture: UITapGestureRecognizer!
     var countTimesTapped = 0
     
     
@@ -41,11 +43,58 @@ class CelebritiesViewController: UIViewController {
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
+        celebrityTapGesture.isEnabled = false
+        tapStack.isUserInteractionEnabled = false
     }
-
+    
+    
+    
+    @IBAction func startGameButton(_ sender: Any) {
+    
+        celebrityTimerLabel.text = "\(counter)"
+        
+        celebrityMyTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            self.counter -= 1
+            self.celebrityTimerLabel.text = "\(self.counter)"
+            if self.counter == 0 {
+                self.celebrityMyTimer.invalidate()
+                self.performSegue(withIdentifier: "ResultsSegue", sender: nil)
+            }
+        }
+    
+        celebrityGameLabel.isHidden = false
+        
+        celebrityGameLabel.text = ("\(FamousPeople[0])")
+        celebrityTapGesture.isEnabled = true
+        celebrityStartGameButton.isHidden = true
+    tapStack.addGestureRecognizer(celebrityTapGesture)
+        tapStack.isUserInteractionEnabled = true
+        
+        
+    }
+    
+    @IBAction func celebrityActionTap(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            celebrityCountTimesTapped += 1
+            celebrityNewWord()
+        }
+    }
+    func celebrityNewWord () {
+        if FamousPeople.count > celebrityCountTimesTapped {
+            celebrityGameLabel.text = FamousPeople[celebrityCountTimesTapped]
+        } else {
+            celebrityGameLabel.text = "Done"
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
     }
 
 }
+
+
+
+

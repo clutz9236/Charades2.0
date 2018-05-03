@@ -27,17 +27,6 @@ class GameViewController: UIViewController {
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo"]
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is ResultsViewController
-        {
-            let vc = segue.destination as? ResultsViewController
-            vc?.rightAnswerLabel.text = ("\(right)")
-            vc?.wrongAnswerLabel.text = ("\(wrong)")
-        }
-    }
-    
-    
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +52,7 @@ class GameViewController: UIViewController {
     @IBAction func wrongAnswerTapAction(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             countTimesTapped += 1
+            right += 1
             wrong += 1
             newWord()
         }
