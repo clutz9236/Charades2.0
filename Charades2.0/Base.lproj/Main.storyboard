@@ -208,7 +208,7 @@
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
                         <outlet property="wrongAnswerStack" destination="xxd-G6-Y4F" id="AaP-Vh-PVn"/>
                         <outlet property="wrongAnswerTap" destination="CJ4-IZ-vug" id="oon-PF-qwI"/>
-                        <segue destination="CnK-l0-gfj" kind="show" identifier="resultsSegue" id="OLn-LD-FdH"/>
+                        <segue destination="CnK-l0-gfj" kind="show" identifier="ResultsSegue" id="OLn-LD-FdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,8 +252,8 @@
                         <viewLayoutGuide key="safeArea" id="XgL-wj-sQ1"/>
                     </view>
                     <connections>
-                        <outlet property="rightAnswerLabel" destination="WEc-ap-d7b" id="RJr-8c-5xg"/>
-                        <outlet property="wrongAnswerLabel" destination="GUt-Tk-HLc" id="5nx-iI-HxE"/>
+                        <outlet property="rightAnswerLabel" destination="WEc-ap-d7b" id="Yls-F2-Ewj"/>
+                        <outlet property="wrongAnswerLabel" destination="GUt-Tk-HLc" id="02f-rq-5xE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1O-V3-bzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,6 +315,6 @@
         <image name="charades pic" width="630" height="630"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GSU-Bd-8Y6"/>
+        <segue reference="OLn-LD-FdH"/>
     </inferredMetricsTieBreakers>
 </document>
