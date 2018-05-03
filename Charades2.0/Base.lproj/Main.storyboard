@@ -74,7 +74,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="celebrityGameLabel" destination="wKq-kb-FKs" id="L25-Jt-3Q3"/>
                         <outlet property="celebrityRightStackView" destination="neg-Vl-kNr" id="mvQ-T5-PUB"/>
+                        <outlet property="celebrityStartGameButton" destination="6p8-Iy-pMY" id="3Xn-75-8fT"/>
+                        <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="sZG-ja-q7N"/>
                         <outlet property="celebrityWrongStackView" destination="SQ3-OQ-MMC" id="JXB-Ib-uYS"/>
                         <segue destination="CnK-l0-gfj" kind="show" id="GSU-Bd-8Y6"/>
                     </connections>
