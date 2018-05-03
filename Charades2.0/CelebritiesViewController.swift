@@ -10,7 +10,9 @@ import UIKit
 
 class CelebritiesViewController: UIViewController {
 
-    
+  
+    @IBOutlet weak var celebrityRightStackView: UIStackView!
+    @IBOutlet weak var celebrityWrongStackView: UIStackView!
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
@@ -19,6 +21,10 @@ class CelebritiesViewController: UIViewController {
     
     
     var counter = 45
+    var celebrityMyTimer: Timer!
+    var celebrityRight = 0
+    var celebrityWrong = 0
+    var celebrityCountTimesTapped = 0
     
   
     
@@ -34,12 +40,12 @@ class CelebritiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        celebrityGameLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
 
 }

@@ -27,6 +27,16 @@ class GameViewController: UIViewController {
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo"]
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ResultsViewController
+        {
+            let vc = segue.destination as? ResultsViewController
+            vc?.rightAnswerLabel.text = ("\(right)")
+            vc?.wrongAnswerLabel.text = ("\(wrong)")
+        }
+    }
+    
     
   
     override func viewDidLoad() {
@@ -34,6 +44,10 @@ class GameViewController: UIViewController {
        
         
         gameLabel.isHidden = true
+        rightAnswerStack.isUserInteractionEnabled = false
+        wrongAnswerStack.isUserInteractionEnabled = false
+        wrongAnswerTap.isEnabled = false
+        rightAnswerTap.isEnabled = false
         
     }
 
@@ -84,6 +98,10 @@ class GameViewController: UIViewController {
         gameLabel.isHidden = false
         rightAnswerStack.addGestureRecognizer(rightAnswerTap)
         wrongAnswerStack.addGestureRecognizer(wrongAnswerTap)
+        rightAnswerStack.isUserInteractionEnabled = true
+        rightAnswerStack.isUserInteractionEnabled = true
+        wrongAnswerTap.isEnabled = true
+        rightAnswerTap.isEnabled = true
     }
     
     
