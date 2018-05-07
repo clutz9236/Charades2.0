@@ -66,10 +66,8 @@
                     </view>
                     <connections>
                         <outlet property="celebrityGameLabel" destination="wKq-kb-FKs" id="L25-Jt-3Q3"/>
-                        <outlet property="celebrityRightStackView" destination="neg-Vl-kNr" id="mvQ-T5-PUB"/>
                         <outlet property="celebrityStartGameButton" destination="6p8-Iy-pMY" id="3Xn-75-8fT"/>
                         <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="sZG-ja-q7N"/>
-                        <outlet property="celebrityWrongStackView" destination="SQ3-OQ-MMC" id="JXB-Ib-uYS"/>
                         <segue destination="CnK-l0-gfj" kind="show" id="GSU-Bd-8Y6"/>
                     </connections>
                 </viewController>
@@ -242,6 +240,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZs-dQ-z9p">
+                                <rect key="frame" x="164" y="405" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XgL-wj-sQ1"/>
