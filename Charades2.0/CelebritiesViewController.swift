@@ -34,8 +34,7 @@ class CelebritiesViewController: UIViewController {
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
-        celebrityTapGesture.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
+        
     }
     
     
@@ -56,10 +55,9 @@ class CelebritiesViewController: UIViewController {
         celebrityGameLabel.isHidden = false
         
         celebrityGameLabel.text = ("\(FamousPeople[0])")
-        celebrityTapGesture.isEnabled = true
+        
         celebrityStartGameButton.isHidden = true
-    tapStack.addGestureRecognizer(celebrityTapGesture)
-        tapStack.isUserInteractionEnabled = true
+    
         
         
     }
