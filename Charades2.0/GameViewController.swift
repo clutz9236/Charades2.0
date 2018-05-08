@@ -16,6 +16,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
+    @IBOutlet weak var correctAnswer: UILabel!
+    @IBOutlet weak var wrongAnswer: UILabel!
+    @IBOutlet weak var answerStack: UIStackView!
     
     var counter = 45
     var myTimer: Timer!
@@ -36,7 +39,7 @@ class GameViewController: UIViewController {
         gameLabel.isHidden = true
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
-            
+        answerStack.isHidden = true
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
@@ -67,8 +70,18 @@ class GameViewController: UIViewController {
         if AnimalWords.count > countTimesTapped {
             gameLabel.text = AnimalWords[Int(arc4random_uniform(UInt32(AnimalWords.count)))]
         } else {
-            gameLabel.text = "Done"
+            giveAnswer()
         }
+    }
+    
+    func giveAnswer() {
+        answerStack.isHidden = false
+        gameLabel.isHidden = true
+        TimerLabel.isHidden = true
+        wrongAnswer.text = ("You got \(wrong) animals wrong")
+        correctAnswer.text = ("You passed \(right) animals")
+        tapGestureOutlet.isEnabled = false
+        tapStack.isUserInteractionEnabled = false
     }
     
     func shuffleArray() -> [String] {
@@ -94,7 +107,7 @@ class GameViewController: UIViewController {
             
             if self.counter == 0 {
                 self.myTimer.invalidate()
-                self.performSegue(withIdentifier: "ResultsSegue", sender: nil)
+                self.giveAnswer()
                
             }
             

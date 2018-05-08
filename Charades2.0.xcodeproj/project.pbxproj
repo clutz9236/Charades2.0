@@ -14,7 +14,6 @@
 		E3625EC52088F67400785A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3625EC42088F67400785A88 /* Assets.xcassets */; };
 		E3625EC82088F67400785A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3625EC62088F67400785A88 /* LaunchScreen.storyboard */; };
 		E398C002209A1BA1000797D5 /* CelebritiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */; };
-		E3F80442209236B800676B55 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F80441209236B800676B55 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		E3625EC72088F67400785A88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3625EC92088F67400785A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebritiesViewController.swift; sourceTree = "<group>"; };
-		E3F80441209236B800676B55 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				E3625EBF2088F67400785A88 /* ViewController.swift */,
 				6F922CE6208A4F36008E28F9 /* GameViewController.swift */,
 				E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */,
-				E3F80441209236B800676B55 /* ResultsViewController.swift */,
 				E3625EC12088F67400785A88 /* Main.storyboard */,
 				E3625EC42088F67400785A88 /* Assets.xcassets */,
 				E3625EC62088F67400785A88 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 				E3625EC02088F67400785A88 /* ViewController.swift in Sources */,
 				6F922CE7208A4F36008E28F9 /* GameViewController.swift in Sources */,
 				E3625EBE2088F67400785A88 /* AppDelegate.swift in Sources */,
-				E3F80442209236B800676B55 /* ResultsViewController.swift in Sources */,
 				E398C002209A1BA1000797D5 /* CelebritiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
