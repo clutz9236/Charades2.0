@@ -22,8 +22,8 @@ class GameViewController: UIViewController {
     var right = 0
     var wrong = 0
     var countTimesTapped = 0
-    let screenSize = UIScreen.main.bounds
-    
+    let width = UIScreen.main.bounds.width
+    var shuffledAnimals = [String]()
 
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo"]
     
@@ -40,21 +40,17 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
-        var location: CGPoint = sender.location(in: sender.view)
         if sender.state == .ended {
             countTimesTapped += 1
-            newWord()
+            newWord(shuffling: shuffleArray())
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        
         for touch in touches {
             let location = touch.location(in: view)
             
-            if(location.x < screenWidth/2){
+            if(location.x < width/2){
                 print("Left")
                 wrong += 1
                 
@@ -67,12 +63,26 @@ class GameViewController: UIViewController {
     }
     
   
-    func newWord() {
+    func newWord(shuffling: [String]) {
         if AnimalWords.count > countTimesTapped {
             gameLabel.text = AnimalWords[Int(arc4random_uniform(UInt32(AnimalWords.count)))]
         } else {
             gameLabel.text = "Done"
         }
+    }
+    
+    func shuffleArray() -> [String] {
+        var randomNumber: Int
+        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo"]
+        var upperLimit = AnimalWords.count
+        
+        for _ in 1...AnimalWords.count {
+            randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
+            shuffledAnimals.append(AnimalWords[randomNumber])
+            AnimalWords.remove(at: randomNumber)
+            upperLimit -= 1
+        }
+        return shuffledAnimals
     }
    
     @IBAction func startGameButton(_ sender: Any) {
