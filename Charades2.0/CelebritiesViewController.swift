@@ -28,14 +28,22 @@ class CelebritiesViewController: UIViewController {
     var celebrityWrong = 0
     var celebrityCountTimesTapped = 0
     
-  let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis"]
+  
+    
+    
+    
+    
+
+    
+    
+    
+    let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
-        celebrityTapGesture.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
+        
     }
     
     
@@ -56,10 +64,9 @@ class CelebritiesViewController: UIViewController {
         celebrityGameLabel.isHidden = false
         
         celebrityGameLabel.text = ("\(FamousPeople[0])")
-        celebrityTapGesture.isEnabled = true
+        
         celebrityStartGameButton.isHidden = true
-    tapStack.addGestureRecognizer(celebrityTapGesture)
-        tapStack.isUserInteractionEnabled = true
+    
         
         
     }
