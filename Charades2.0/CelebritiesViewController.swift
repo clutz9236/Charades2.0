@@ -16,26 +16,20 @@ class CelebritiesViewController: UIViewController {
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
-    
+    @IBOutlet weak var answerStack: UIStackView!
+    @IBOutlet weak var rightAnswer: UILabel!
+    @IBOutlet weak var wrongAnswer: UILabel!
     @IBOutlet var celebrityTapGesture: UITapGestureRecognizer!
+    
+    
     var countTimesTapped = 0
-    
-    
-    
     var counter = 45
     var celebrityMyTimer: Timer!
     var celebrityRight = 0
     var celebrityWrong = 0
     var celebrityCountTimesTapped = 0
-    
-  
-    
-    
-    
-    
-
-    
-    
+    var width = UIScreen.main.bounds.width
+    var shuffledPeople = [String]()
     
     let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis"]
     
@@ -43,7 +37,7 @@ class CelebritiesViewController: UIViewController {
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
-        
+        tapStack.isUserInteractionEnabled = false
     }
     
     
