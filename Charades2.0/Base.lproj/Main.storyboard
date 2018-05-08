@@ -66,6 +66,7 @@
                     <connections>
                         <outlet property="celebrityGameLabel" destination="wKq-kb-FKs" id="L25-Jt-3Q3"/>
                         <outlet property="celebrityStartGameButton" destination="6p8-Iy-pMY" id="3Xn-75-8fT"/>
+                        <outlet property="celebrityTapGesture" destination="1qf-mQ-X7H" id="mFA-z4-SD4"/>
                         <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="sZG-ja-q7N"/>
                         <segue destination="CnK-l0-gfj" kind="show" identifier="ResultsSegue" id="GSU-Bd-8Y6"/>
                     </connections>
@@ -175,17 +176,53 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8od-a6-sOI">
+                                <rect key="frame" x="0.0" y="314" width="375" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-LR-6aR">
+                                        <rect key="frame" x="166.5" y="0.0" width="42" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51.5" id="GfK-XL-aBO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1P-bG-yZr">
+                                        <rect key="frame" x="166.5" y="52" width="42" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51.5" id="sZh-fw-lor"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="n1P-bG-yZr" firstAttribute="top" secondItem="Qbu-LR-6aR" secondAttribute="bottom" id="F0i-so-sN4"/>
+                                    <constraint firstItem="Qbu-LR-6aR" firstAttribute="top" secondItem="8od-a6-sOI" secondAttribute="top" id="cBQ-6m-zub"/>
+                                    <constraint firstItem="n1P-bG-yZr" firstAttribute="top" secondItem="Qbu-LR-6aR" secondAttribute="bottom" id="nEj-p3-Qz4"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1P-bG-yZr" secondAttribute="bottom" id="qDj-Ze-UHT"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8od-a6-sOI" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="C61-eu-J8i"/>
+                            <constraint firstItem="8od-a6-sOI" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" constant="250" id="gwv-Bj-kQm"/>
+                            <constraint firstItem="MDg-wU-V4S" firstAttribute="trailing" secondItem="8od-a6-sOI" secondAttribute="trailing" id="hKE-EJ-gU6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
                     <connections>
                         <outlet property="TimerLabel" destination="HLJ-Yh-sAg" id="ET0-Bx-UEc"/>
+                        <outlet property="answerStack" destination="8od-a6-sOI" id="C1D-Z3-qqh"/>
+                        <outlet property="correctAnswer" destination="Qbu-LR-6aR" id="Ki1-lh-elE"/>
                         <outlet property="gameLabel" destination="uJB-Qn-9Qb" id="NRu-VA-9Om"/>
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
                         <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="llW-Pu-2cp"/>
                         <outlet property="tapStack" destination="jIS-gM-PTJ" id="hIZ-tH-j3s"/>
-                        <segue destination="CnK-l0-gfj" kind="show" identifier="ResultsSegue" id="OLn-LD-FdH"/>
+                        <outlet property="wrongAnswer" destination="n1P-bG-yZr" id="aWv-vY-ZvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,57 +234,9 @@
             </objects>
             <point key="canvasLocation" x="1133.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--Results View Controller-->
-        <scene sceneID="0oL-Ov-xQs">
-            <objects>
-                <viewController id="CnK-l0-gfj" customClass="ResultsViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mX4-Zv-gRA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUt-Tk-HLc">
-                                <rect key="frame" x="235" y="323" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEc-ap-d7b">
-                                <rect key="frame" x="37" y="323" width="42" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Game Over!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kf1-9r-pQy">
-                                <rect key="frame" x="67" y="76" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZs-dQ-z9p">
-                                <rect key="frame" x="124" y="411" width="105" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                <state key="normal" title="Back to Start"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="XgL-wj-sQ1"/>
-                    </view>
-                    <connections>
-                        <outlet property="rightAnswerLabel" destination="WEc-ap-d7b" id="Yls-F2-Ewj"/>
-                        <outlet property="wrongAnswerLabel" destination="GUt-Tk-HLc" id="02f-rq-5xE"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O1O-V3-bzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1776.8" y="133.5832083958021"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="Ufa-0S-rCW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ga9-g8-iPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="2eu-k9-sre" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rk4-FE-Pui">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -273,6 +262,7 @@
                         <viewLayoutGuide key="safeArea" id="cPu-y4-KH6"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ga9-g8-iPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="862.21889055472275"/>
         </scene>
@@ -298,7 +288,4 @@
     <resources>
         <image name="charades pic" width="630" height="630"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GSU-Bd-8Y6"/>
-    </inferredMetricsTieBreakers>
 </document>
