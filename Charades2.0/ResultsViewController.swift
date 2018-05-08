@@ -13,10 +13,13 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var rightAnswerLabel: UILabel!
     @IBOutlet weak var wrongAnswerLabel: UILabel!
     
-
+    let vc = GameViewController()
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        rightAnswerLabel.text = ("\(vc.right)")
+        wrongAnswerLabel.text = ("\(vc.wrong)")
     }
 
 
