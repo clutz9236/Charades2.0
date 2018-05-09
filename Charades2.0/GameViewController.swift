@@ -78,8 +78,8 @@ class GameViewController: UIViewController {
         answerStack.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        wrongAnswer.text = ("You got \(wrong) animals wrong")
-        correctAnswer.text = ("You passed \(right) animals")
+        wrongAnswer.text = ("You passed \(wrong) animals")
+        correctAnswer.text = ("You got \(right) animals right")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
     }
