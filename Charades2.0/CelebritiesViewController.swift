@@ -38,6 +38,7 @@ class CelebritiesViewController: UIViewController {
 
         celebrityGameLabel.isHidden = true
         tapStack.isUserInteractionEnabled = false
+        answerStack.isHidden = true
     }
     
     
@@ -54,14 +55,12 @@ class CelebritiesViewController: UIViewController {
                 self.performSegue(withIdentifier: "ResultsSegue", sender: nil)
             }
         }
-    
-        celebrityGameLabel.isHidden = false
-        
         celebrityGameLabel.text = ("\(FamousPeople[0])")
-        
         celebrityStartGameButton.isHidden = true
-    
-        
+        celebrityGameLabel.isHidden = false
+        celebrityTapGesture.isEnabled = false
+        tapStack.isUserInteractionEnabled = true
+        tapStack.addGestureRecognizer(celebrityTapGesture)
         
     }
     
@@ -78,6 +77,7 @@ class CelebritiesViewController: UIViewController {
             celebrityGameLabel.text = "Done"
         }
     }
+    
     
     
     override func didReceiveMemoryWarning() {
