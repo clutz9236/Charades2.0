@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBOutlet weak var tapStack: UIStackView!
@@ -26,8 +26,16 @@ class GameViewController: UIViewController {
     var wrong = 0
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
+    var color = [UIColor]()
 
+    var tableView: UITableView = {
+       let tableView = UITableView()
+        return tableView
+    }()
+    var cellId = "cell"
+    
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
     
     
@@ -40,37 +48,34 @@ class GameViewController: UIViewController {
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         answerStack.isHidden = true
+        
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        let location = tapGestureOutlet.location(in: view)
         if sender.state == .ended {
             countTimesTapped += 1
             newWord(shuffling: shuffleArray())
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            let location = touch.location(in: view)
             
             if(location.x < width/2){
                 print("Left")
                 wrong += 1
-                
+                color.append(.red)
             }
             else {
                 print("Right")
                 right += 1
+                color.append(.green)
             }
         }
     }
-    
   
     func newWord(shuffling: [String]) {
         if AnimalWords.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
+            print(shuffledAnimals)
         }
     }
     
@@ -82,6 +87,10 @@ class GameViewController: UIViewController {
         correctAnswer.text = ("You got \(right) animals right")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
+        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: 550)
+        view.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
     
     func shuffleArray() -> [String] {
@@ -108,7 +117,7 @@ class GameViewController: UIViewController {
             if self.counter == 0 {
                 self.myTimer.invalidate()
                 self.giveAnswer()
-               
+                print(self.shuffledAnimals)
             }
             
         }
@@ -122,6 +131,17 @@ class GameViewController: UIViewController {
     }
     
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return right + wrong
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let shuffled = shuffleArray()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+            cell?.textLabel?.text = shuffled[indexPath.row]
+            cell?.textLabel?.textColor = color[indexPath.row]
+            return cell!
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
