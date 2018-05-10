@@ -60,12 +60,13 @@ class GameViewController: UIViewController {
                 wrong += 1
                 totalLosses += 1
                 
-            }
-            else {
+            } else {
                 print("Right")
                 right += 1
                 totalwins += 1
             }
+            
+            updateUI()
         }
     }
     
@@ -127,6 +128,7 @@ class GameViewController: UIViewController {
     
     func updateUI () {
         "Wins:\(totalwins), Losses:" + String(totalLosses)
+        
     }
     
     override func didReceiveMemoryWarning() {
