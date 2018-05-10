@@ -17,8 +17,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
     @IBOutlet weak var correctAnswer: UILabel!
-    @IBOutlet weak var wrongAnswer: UILabel!
-    @IBOutlet weak var answerStack: UIStackView!
     
     var counter = 45
     var myTimer: Timer!
@@ -47,7 +45,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         gameLabel.isHidden = true
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
-        answerStack.isHidden = true
+        correctAnswer.isHidden = true
         
     }
 
@@ -80,14 +78,15 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func giveAnswer() {
-        answerStack.isHidden = false
+        correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        wrongAnswer.text = ("You passed \(wrong) animals")
-        correctAnswer.text = ("You got \(right) animals right")
+        correctAnswer.text = ("You got \(right) animals right and \(wrong) wrong")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
-        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: 550)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
