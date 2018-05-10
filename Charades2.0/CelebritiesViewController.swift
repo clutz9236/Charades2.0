@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CelebritiesViewController: UIViewController {
+class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   
    
@@ -16,9 +16,7 @@ class CelebritiesViewController: UIViewController {
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
-    @IBOutlet weak var answerStack: UIStackView!
     @IBOutlet weak var rightAnswer: UILabel!
-    @IBOutlet weak var wrongAnswer: UILabel!
     @IBOutlet var celebrityTapGesture: UITapGestureRecognizer!
     
     
@@ -29,7 +27,15 @@ class CelebritiesViewController: UIViewController {
     var celebrityWrong = 0
     var celebrityCountTimesTapped = 0
     var width = UIScreen.main.bounds.width
+    var height = UIScreen.main.bounds.height
     var shuffledPeople = [String]()
+    var color = [UIColor]()
+    
+    var tableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+    var cellId = "cell"
     
     let FamousPeople = ["Jay - Z", "Brad Pitt", "Katy Perry", "Benedict Cumberbatch", "Donald Trump", "Oprah", "Prince Harry", "Sandra Bullock", "Tom Hanks", "Chris Pratt", "Chris Evans", "Scarlett Johansson", "Tom Holland", "Josh Brolin",  "Robert Downey Jr", "Stan Lee", "Chris Hemsworth", "Vin Diesel", "Mark Ruffalo", "Ninja", "Angelina Jolie", "Kim Kardashian", "Natalie Portman", "Viola Davis", "Selena Gomez", "Amy Adams", "Alicia Keys", "Anne Hathaway", "Blake Lively", "Avril Lavigne", "Brooke Shield", "Celine Dion", "Christina Aguilera", "Corbin Bleu", "Courteney Cox", "Dakota Fanning", "Drew Barrymore", "Emma Roberts", "Ellen DeGeneres", "Emma Watson", "Fergie", "Gwen Stefani", "George Clooney", "Hugh Jackman", "Hilary Duff", "Heath Ledger", "Isla Fisher", "James Franco", "Janet Jackson", "Jennifer Lopez", "Jamie Lynn Spears", "Jessica Alba", "Joe Jonas", "John Krasinski", "Amy Pohler", "John Mayer", "Jordin Sparks", "Johnny Depp", "Jude Law", "Julia Roberts", "Josh Hutcherson", "Katie Holmes", "Kate Hudson", "Justin Timberlake", "Justin Beiber", "Keira Knightley", "Keith Urban", "Kellan Lutz", "Kelly Clarkson", "Kelly Ripa", "Kerry Washington", "Kirsten Dunst", "Kristen Stewart", "Lady Gaga", "Madonna", "Lea Michele", "Mandy Moore", "Mariah Carey", "Matt Damon", "Ed Sheeran"]
     
@@ -38,7 +44,7 @@ class CelebritiesViewController: UIViewController {
 
         celebrityGameLabel.isHidden = true
         tapStack.isUserInteractionEnabled = false
-        answerStack.isHidden = true
+        rightAnswer.isHidden = true
     }
     
     
@@ -66,24 +72,20 @@ class CelebritiesViewController: UIViewController {
     }
     
     @IBAction func celebrityActionTap(_ sender: UITapGestureRecognizer) {
+         let location = celebrityTapGesture.location(in: view)
         if sender.state == .ended {
             celebrityCountTimesTapped += 1
             celebrityNewWord(shuffling: shuffleArray())
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            let location = touch.location(in: view)
             
             if(location.x < width/2){
                 print("Left")
                 celebrityWrong += 1
-                
+                color.append(.red)
             }
             else {
                 print("Right")
                 celebrityRight += 1
+                color.append(.green)
             }
         }
     }
@@ -98,13 +100,17 @@ class CelebritiesViewController: UIViewController {
     }
     
     func giveAnswer() {
-        answerStack.isHidden = false
+        rightAnswer.isHidden = false
         celebrityGameLabel.isHidden = true
         celebrityTimerLabel.isHidden = true
-        wrongAnswer.text = ("You passed \(celebrityWrong) people")
-        rightAnswer.text = ("You got \(celebrityRight) correct")
+        rightAnswer.text = ("You got \(celebrityRight) correct and \(celebrityWrong) wrong")
         celebrityTapGesture.isEnabled = false
         tapStack.isUserInteractionEnabled = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
+        view.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     func shuffleArray() -> [String] {
         var randomNumber: Int
@@ -118,6 +124,18 @@ class CelebritiesViewController: UIViewController {
             upperLimit -= 1
         }
         return shuffledPeople
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return celebrityRight + celebrityWrong
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let shuffled = shuffleArray()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = shuffled[indexPath.row]
+        cell?.textLabel?.textColor = color[indexPath.row]
+        return cell!
     }
     
     override func didReceiveMemoryWarning() {
