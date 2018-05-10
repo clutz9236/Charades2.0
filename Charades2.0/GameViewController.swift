@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBOutlet weak var tapStack: UIStackView!
@@ -17,8 +17,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var TimerLabel: UILabel!
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
     @IBOutlet weak var correctAnswer: UILabel!
-    @IBOutlet weak var wrongAnswer: UILabel!
-    @IBOutlet weak var answerStack: UIStackView!
     
     var counter = 45
     var myTimer: Timer!
@@ -26,10 +24,17 @@ class GameViewController: UIViewController {
     var wrong = 0
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
     var totalwins = 0
     var totalLosses = 0
 
+    var tableView: UITableView = {
+       let tableView = UITableView()
+        return tableView
+    }()
+    var cellId = "cell"
+    
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
     
     
@@ -41,19 +46,15 @@ class GameViewController: UIViewController {
         gameLabel.isHidden = true
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
-        answerStack.isHidden = true
+        correctAnswer.isHidden = true
+        
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
+        let location = tapGestureOutlet.location(in: view)
         if sender.state == .ended {
             countTimesTapped += 1
             newWord(shuffling: shuffleArray())
-        }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            let location = touch.location(in: view)
             
             if(location.x < width/2){
                 print("Left")
@@ -69,24 +70,30 @@ class GameViewController: UIViewController {
             updateUI()
         }
     }
-    
   
     func newWord(shuffling: [String]) {
         if AnimalWords.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
+            print(shuffledAnimals)
         }
     }
     
     func giveAnswer() {
-        answerStack.isHidden = false
+        correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
         wrongAnswer.text = ("You got \(wrong) animals wrong")
         correctAnswer.text = ("You got \(right) animals correct")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
+        view.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
     
     func shuffleArray() -> [String] {
@@ -113,7 +120,7 @@ class GameViewController: UIViewController {
             if self.counter == 0 {
                 self.myTimer.invalidate()
                 self.giveAnswer()
-               
+                print(self.shuffledAnimals)
             }
             
         }

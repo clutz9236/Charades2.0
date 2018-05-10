@@ -53,6 +53,7 @@ class CelebritiesViewController: UIViewController {
             if self.counter == 0 {
                 self.celebrityMyTimer.invalidate()
                 self.giveAnswer()
+                print(self.shuffledPeople)
             }
         }
         celebrityGameLabel.text = ("\(FamousPeople[0])")
@@ -92,6 +93,7 @@ class CelebritiesViewController: UIViewController {
             celebrityGameLabel.text = shuffling[celebrityCountTimesTapped]
         } else {
             giveAnswer()
+            print(shuffledPeople)
         }
     }
     

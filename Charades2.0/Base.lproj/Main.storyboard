@@ -213,53 +213,29 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8od-a6-sOI">
-                                <rect key="frame" x="0.0" y="314" width="375" height="104"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-LR-6aR">
-                                        <rect key="frame" x="166.5" y="0.0" width="42" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="51.5" id="GfK-XL-aBO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1P-bG-yZr">
-                                        <rect key="frame" x="166.5" y="52" width="42" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="51.5" id="sZh-fw-lor"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="n1P-bG-yZr" firstAttribute="top" secondItem="Qbu-LR-6aR" secondAttribute="bottom" id="F0i-so-sN4"/>
-                                    <constraint firstItem="Qbu-LR-6aR" firstAttribute="top" secondItem="8od-a6-sOI" secondAttribute="top" id="cBQ-6m-zub"/>
-                                    <constraint firstItem="n1P-bG-yZr" firstAttribute="top" secondItem="Qbu-LR-6aR" secondAttribute="bottom" id="nEj-p3-Qz4"/>
-                                    <constraint firstAttribute="bottom" secondItem="n1P-bG-yZr" secondAttribute="bottom" id="qDj-Ze-UHT"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-LR-6aR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8od-a6-sOI" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="C61-eu-J8i"/>
-                            <constraint firstItem="8od-a6-sOI" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" constant="250" id="gwv-Bj-kQm"/>
-                            <constraint firstItem="MDg-wU-V4S" firstAttribute="trailing" secondItem="8od-a6-sOI" secondAttribute="trailing" id="hKE-EJ-gU6"/>
+                            <constraint firstItem="MDg-wU-V4S" firstAttribute="bottom" secondItem="Qbu-LR-6aR" secondAttribute="bottom" constant="551" id="HbZ-YT-l2y"/>
+                            <constraint firstItem="Qbu-LR-6aR" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="IgU-Ed-hyq"/>
+                            <constraint firstItem="MDg-wU-V4S" firstAttribute="trailing" secondItem="Qbu-LR-6aR" secondAttribute="trailing" id="VYB-O0-drz"/>
+                            <constraint firstItem="Qbu-LR-6aR" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" id="bh1-CO-uqp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MDg-wU-V4S"/>
                     </view>
                     <connections>
                         <outlet property="TimerLabel" destination="HLJ-Yh-sAg" id="ET0-Bx-UEc"/>
-                        <outlet property="answerStack" destination="8od-a6-sOI" id="C1D-Z3-qqh"/>
                         <outlet property="correctAnswer" destination="Qbu-LR-6aR" id="Ki1-lh-elE"/>
                         <outlet property="gameLabel" destination="uJB-Qn-9Qb" id="NRu-VA-9Om"/>
                         <outlet property="startGameOutlet" destination="ygy-5C-tcD" id="4tD-9U-3t1"/>
                         <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="llW-Pu-2cp"/>
                         <outlet property="tapStack" destination="jIS-gM-PTJ" id="hIZ-tH-j3s"/>
-                        <outlet property="wrongAnswer" destination="n1P-bG-yZr" id="aWv-vY-ZvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOq-xE-b9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
