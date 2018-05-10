@@ -27,6 +27,8 @@ class GameViewController: UIViewController {
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
     var shuffledAnimals = [String]()
+    var totalwins = 0
+    var totalLosses = 0
 
    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
     
@@ -56,11 +58,13 @@ class GameViewController: UIViewController {
             if(location.x < width/2){
                 print("Left")
                 wrong += 1
+                totalLosses += 1
                 
             }
             else {
                 print("Right")
                 right += 1
+                totalwins += 1
             }
         }
     }
@@ -121,7 +125,9 @@ class GameViewController: UIViewController {
 
     }
     
-    
+    func updateUI () {
+        "Wins:\(totalwins), Losses:" + String(totalLosses)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
