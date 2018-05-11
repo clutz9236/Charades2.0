@@ -28,6 +28,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     var shuffledAnimals = [String]()
     var totalwins = 0
     var totalLosses = 0
+    var color = [UIColor]()
 
     var tableView: UITableView = {
        let tableView = UITableView()
@@ -60,11 +61,13 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Left")
                 wrong += 1
                 totalLosses += 1
+                color.append(.red)
                 
             } else {
                 print("Right")
                 right += 1
                 totalwins += 1
+                color.append(.green)
             }
             
             updateUI()
@@ -84,8 +87,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        wrongAnswer.text = ("You got \(wrong) animals wrong")
-        correctAnswer.text = ("You got \(right) animals correct")
+        correctAnswer.text = ("You got \(right) animals correct and \(wrong) wrong")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
@@ -137,21 +139,10 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         "Wins:\(totalwins), Losses:" + String(totalLosses)
     }
     
-    func giveAnswer() {
-        rightAnswer.isHidden = false
-        gameLabel.isHidden = true
-        TimerLabel.isHidden = true
-        correctAnswer.text = ("You got \(right) correct and \(wrong) wrong")
-        tapGestureOutlet.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
-        view.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return celebrityRight + celebrityWrong
+        return right + wrong
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
