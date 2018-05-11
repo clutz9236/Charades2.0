@@ -135,7 +135,31 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func updateUI () {
         "Wins:\(totalwins), Losses:" + String(totalLosses)
-        
+    }
+    
+    func giveAnswer() {
+        rightAnswer.isHidden = false
+        gameLabel.isHidden = true
+        TimerLabel.isHidden = true
+        correctAnswer.text = ("You got \(right) correct and \(wrong) wrong")
+        tapGestureOutlet.isEnabled = false
+        tapStack.isUserInteractionEnabled = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
+        view.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return celebrityRight + celebrityWrong
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let shuffled = shuffleArray()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = shuffled[indexPath.row]
+        cell?.textLabel?.textColor = color[indexPath.row]
+        return cell!
     }
     
     override func didReceiveMemoryWarning() {
