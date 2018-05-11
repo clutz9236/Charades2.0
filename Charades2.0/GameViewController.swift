@@ -18,6 +18,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
     @IBOutlet weak var correctAnswer: UILabel!
     
+    
     var counter = 45
     var myTimer: Timer!
     var right = 0
@@ -48,7 +49,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
-        
+            
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
@@ -70,7 +71,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 color.append(.green)
             }
             
-            updateUI()
         }
     }
   
@@ -135,11 +135,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
-    func updateUI () {
-        "Wins:\(totalwins), Losses:" + String(totalLosses)
-    }
     
-   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return right + wrong
