@@ -120,7 +120,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             
         }
-        gameLabel.text = ("\(AnimalWords[0])")
+        newWord(shuffling: shuffleArray())
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
         tapGestureOutlet.isEnabled = true

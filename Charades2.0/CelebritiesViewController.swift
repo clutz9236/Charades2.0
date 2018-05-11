@@ -62,7 +62,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
                 print(self.shuffledPeople)
             }
         }
-        celebrityGameLabel.text = ("\(FamousPeople[0])")
+        celebrityNewWord(shuffling: shuffleArray())
         celebrityStartGameButton.isHidden = true
         celebrityGameLabel.isHidden = false
         celebrityTapGesture.isEnabled = true

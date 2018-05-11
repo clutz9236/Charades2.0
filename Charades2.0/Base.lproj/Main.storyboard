@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-eM-M4c">
-                                <rect key="frame" x="0.0" y="64" width="42" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-eM-M4c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-Wm-kg8">
                                 <rect key="frame" x="104" y="97" width="167" height="119.5"/>
@@ -59,12 +58,16 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="bottom" secondItem="6nM-uo-RiS" secondAttribute="bottom" constant="550" id="0BS-G1-gFI"/>
+                            <constraint firstItem="7iQ-eM-M4c" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="AUR-tk-kfk"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" constant="33" id="Aw6-la-8kg"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" constant="104" id="JHf-IZ-fp7"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="6nM-uo-RiS" secondAttribute="trailing" id="YXe-lo-UWG"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="7iQ-eM-M4c" secondAttribute="trailing" id="a1R-ce-1re"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="TlN-Wm-kg8" secondAttribute="trailing" constant="104" id="bZk-a9-ugf"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="cQw-xD-nGo"/>
                             <constraint firstItem="6nM-uo-RiS" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="fbv-e7-zuK"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="bottom" secondItem="7iQ-eM-M4c" secondAttribute="bottom" id="gfc-ac-ZKq"/>
+                            <constraint firstItem="7iQ-eM-M4c" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="jVo-u8-YGz"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="top" secondItem="TlN-Wm-kg8" secondAttribute="bottom" constant="35" id="wti-kr-FYe"/>
                             <constraint firstItem="6nM-uo-RiS" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="z9U-5v-tY9"/>
                         </constraints>
