@@ -137,12 +137,6 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         cell?.textLabel?.textColor = color[indexPath.row]
         return cell!
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    
-    }
-
 }
 
 
