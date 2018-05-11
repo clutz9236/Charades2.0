@@ -18,6 +18,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
     @IBOutlet weak var correctAnswer: UILabel!
     
+    
     var counter = 45
     var myTimer: Timer!
     var right = 0
@@ -26,6 +27,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
+    var totalwins = 0
+    var totalLosses = 0
     var color = [UIColor]()
 
     var tableView: UITableView = {
@@ -46,7 +49,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
-        
+            
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
@@ -58,13 +61,16 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             if(location.x < width/2){
                 print("Left")
                 wrong += 1
+                totalLosses += 1
                 color.append(.red)
-            }
-            else {
+                
+            } else {
                 print("Right")
                 right += 1
+                totalwins += 1
                 color.append(.green)
             }
+            
         }
     }
   
@@ -81,7 +87,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        correctAnswer.text = ("You got \(right) animals right and \(wrong) wrong")
+        correctAnswer.text = ("You got \(right) animals correct and \(wrong) wrong")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
@@ -130,6 +136,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return right + wrong
     }
@@ -137,9 +144,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shuffled = shuffleArray()
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-            cell?.textLabel?.text = shuffled[indexPath.row]
-            cell?.textLabel?.textColor = color[indexPath.row]
-            return cell!
+        cell?.textLabel?.text = shuffled[indexPath.row]
+        cell?.textLabel?.textColor = color[indexPath.row]
+        return cell!
     }
     
     override func didReceiveMemoryWarning() {

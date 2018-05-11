@@ -62,12 +62,16 @@
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" constant="33" id="Aw6-la-8kg"/>
                             <constraint firstItem="7iQ-eM-M4c" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="IEC-1v-LWB"/>
                             <constraint firstItem="TlN-Wm-kg8" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" constant="104" id="JHf-IZ-fp7"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="7iQ-eM-M4c" secondAttribute="trailing" id="Roy-Fl-dE9"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="6nM-uo-RiS" secondAttribute="trailing" id="YXe-lo-UWG"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="7iQ-eM-M4c" secondAttribute="trailing" id="ZVL-LW-gCl"/>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="trailing" secondItem="TlN-Wm-kg8" secondAttribute="trailing" constant="104" id="bZk-a9-ugf"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="centerX" secondItem="VQg-W5-cd7" secondAttribute="centerX" id="cQw-xD-nGo"/>
                             <constraint firstItem="7iQ-eM-M4c" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="daN-n6-hOl"/>
                             <constraint firstItem="6nM-uo-RiS" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="fbv-e7-zuK"/>
+                            <constraint firstItem="7iQ-eM-M4c" firstAttribute="top" secondItem="ekp-mE-Jcn" secondAttribute="top" id="jSY-Cl-wDh"/>
+                            <constraint firstItem="7iQ-eM-M4c" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="jWC-J5-WGz"/>
+                            <constraint firstItem="ekp-mE-Jcn" firstAttribute="bottom" secondItem="7iQ-eM-M4c" secondAttribute="bottom" id="w8h-a9-nq6"/>
                             <constraint firstItem="wKq-kb-FKs" firstAttribute="top" secondItem="TlN-Wm-kg8" secondAttribute="bottom" constant="35" id="wti-kr-FYe"/>
                             <constraint firstItem="6nM-uo-RiS" firstAttribute="leading" secondItem="ekp-mE-Jcn" secondAttribute="leading" id="z9U-5v-tY9"/>
                         </constraints>
