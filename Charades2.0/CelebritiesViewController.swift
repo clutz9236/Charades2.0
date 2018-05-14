@@ -79,13 +79,13 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
             
             if(location.x < width/2){
                 print("Left")
-                celebrityWrong += 1
-                color.append(.red)
+                celebrityRight += 1
+                color.append(.green)
             }
             else {
                 print("Right")
-                celebrityRight += 1
-                color.append(.green)
+                celebrityWrong += 1
+                color.append(.red)
             }
         }
     }

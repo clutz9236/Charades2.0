@@ -60,15 +60,15 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if(location.x < width/2){
                 print("Left")
-                wrong += 1
+                right += 1
                 totalLosses += 1
-                color.append(.red)
+                color.append(.green)
                 
             } else {
                 print("Right")
-                right += 1
+                wrong += 1
                 totalwins += 1
-                color.append(.green)
+                color.append(.red)
             }
             
         }
