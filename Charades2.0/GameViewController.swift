@@ -101,6 +101,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func shuffleArray() -> [String] {
         var randomNumber: Int
         var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
+        
         var upperLimit = AnimalWords.count
         
         for _ in 1...AnimalWords.count {
@@ -132,10 +133,13 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tapGestureOutlet.isEnabled = true
         tapStack.isUserInteractionEnabled = true
         tapStack.addGestureRecognizer(tapGestureOutlet)
-
     }
     
-    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "animalSegue" {
+                
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return right + wrong
