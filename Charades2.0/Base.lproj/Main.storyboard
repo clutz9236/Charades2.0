@@ -19,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-eM-M4c">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-Wm-kg8">
-                                <rect key="frame" x="104" y="97" width="167" height="119.5"/>
+                                <rect key="frame" x="104" y="53" width="167" height="119.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKq-kb-FKs">
-                                <rect key="frame" x="154.5" y="251.5" width="65" height="33"/>
+                                <rect key="frame" x="154.5" y="207.5" width="65" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p8-Iy-pMY">
-                                <rect key="frame" x="76" y="494" width="222" height="89"/>
+                                <rect key="frame" x="76" y="450" width="222" height="133"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -42,13 +42,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nM-uo-RiS">
-                                <rect key="frame" x="0.0" y="64" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="97"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ekp-mE-Jcn" firstAttribute="bottom" secondItem="6nM-uo-RiS" secondAttribute="bottom" constant="550" id="0BS-G1-gFI"/>
@@ -94,7 +94,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1133.5999999999999" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="1273" y="-584"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Celebrities"/>
                                 <connections>
-                                    <segue destination="CaM-0A-KHK" kind="show" id="fXb-eh-aAa"/>
+                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="celebritySegue" id="gNd-9g-0xd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
@@ -126,7 +126,7 @@
                                 <state key="normal" title="Animals"/>
                                 <connections>
                                     <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
-                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="gameViewControllerSegue" id="hRp-Og-QWd"/>
+                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charades pic" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-5X-Hqv">
@@ -137,22 +137,22 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.88884411585579537" blue="0.61528312264058971" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="BK0-5X-Hqv" secondAttribute="bottom" constant="8" id="149-9o-u3s"/>
                             <constraint firstItem="dnK-Fd-TV7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="445" id="BKV-tK-MpZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BK0-5X-Hqv" secondAttribute="trailing" constant="73" id="C6L-wf-TF6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="26h-52-jom" secondAttribute="trailing" constant="117" id="E1c-v0-zMl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BK0-5X-Hqv" secondAttribute="trailing" constant="73" id="IQ5-JR-e6J"/>
                             <constraint firstItem="Ecs-9C-qyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="NyU-Ca-uIA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dnK-Fd-TV7" secondAttribute="bottom" constant="128" id="Ps0-Lq-TJc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnK-Fd-TV7" secondAttribute="trailing" constant="123" id="SLY-5g-c7v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ecs-9C-qyB" secondAttribute="bottom" constant="20" id="TsN-4v-5K0"/>
                             <constraint firstItem="26h-52-jom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="UVy-91-PeO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ecs-9C-qyB" secondAttribute="trailing" constant="169" id="cQt-zP-k5f"/>
-                            <constraint firstItem="BK0-5X-Hqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="eMZ-Lo-PFs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="26h-52-jom" secondAttribute="bottom" constant="166" id="eXJ-8P-qgS"/>
                             <constraint firstItem="dnK-Fd-TV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="f4a-Ro-oSk"/>
                             <constraint firstItem="Ecs-9C-qyB" firstAttribute="top" secondItem="BK0-5X-Hqv" secondAttribute="bottom" constant="205" id="lWR-1S-AKT"/>
+                            <constraint firstItem="BK0-5X-Hqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="s4K-mu-i20"/>
                             <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="356" id="sYD-C4-ZIC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jIS-gM-PTJ" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="4Zf-yg-LXY"/>
                             <constraint firstItem="HLJ-Yh-sAg" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" constant="104" id="8Ht-kB-c9j"/>
@@ -242,7 +242,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1133.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1273" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ufa-0S-rCW">
@@ -252,23 +252,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g82-Kv-QY5">
-                                <rect key="frame" x="40" y="155" width="313" height="492"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g82-Kv-QY5">
+                                <rect key="frame" x="0.0" y="155" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Pick a category that interests you. A three second count down will begin. Place your phone on your head, with the screen facing your friends. Friends will give you clues to the word. If you guess the word correctly, tap the left side. If you wish to pass, tap the right side. After 45 seconds the game will end. Enjoy!</string>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-QK-eMt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-QK-eMt">
                                 <rect key="frame" x="114" y="101" width="146" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cPu-y4-KH6" firstAttribute="trailing" secondItem="Jre-QK-eMt" secondAttribute="trailing" constant="115" id="0S9-nY-IFc"/>
+                            <constraint firstItem="cPu-y4-KH6" firstAttribute="trailing" secondItem="g82-Kv-QY5" secondAttribute="trailing" id="9n6-Rh-cYW"/>
+                            <constraint firstItem="g82-Kv-QY5" firstAttribute="top" secondItem="rk4-FE-Pui" secondAttribute="topMargin" constant="91" id="Ktt-oN-yZR"/>
+                            <constraint firstItem="Jre-QK-eMt" firstAttribute="top" secondItem="cPu-y4-KH6" secondAttribute="top" constant="37" id="U61-cf-uYi"/>
+                            <constraint firstItem="cPu-y4-KH6" firstAttribute="bottom" secondItem="g82-Kv-QY5" secondAttribute="bottom" id="Ucm-49-sMa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Jre-QK-eMt" secondAttribute="bottom" constant="526" id="hZe-T1-QYU"/>
+                            <constraint firstItem="Jre-QK-eMt" firstAttribute="leading" secondItem="cPu-y4-KH6" secondAttribute="leading" constant="114" id="mMv-qO-IA4"/>
+                            <constraint firstItem="g82-Kv-QY5" firstAttribute="leading" secondItem="cPu-y4-KH6" secondAttribute="leading" id="t9G-RI-hhb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cPu-y4-KH6"/>
                     </view>
                 </viewController>
@@ -298,4 +306,7 @@
     <resources>
         <image name="charades pic" width="630" height="630"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gNd-9g-0xd"/>
+    </inferredMetricsTieBreakers>
 </document>
