@@ -136,6 +136,11 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    
+    
+    
+    
+    
     func updateUI () {
            "Wins:\(totalwins), Losses:" + String(totalLosses)
     }
