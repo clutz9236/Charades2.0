@@ -72,6 +72,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             
         }
+        updateUI()
     }
   
     func newWord(shuffling: [String]) {
@@ -135,6 +136,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    func updateUI () {
+           "Wins:\(totalwins), Losses:" + String(totalLosses)
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
