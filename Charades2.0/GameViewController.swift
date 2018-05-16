@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var player:AVAudioPlayer = AVAudioPlayer()
     
 
     @IBOutlet weak var tapStack: UIStackView!
@@ -117,6 +119,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
    
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
+    
+        
         
         myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
             self.counter -= 1
@@ -126,9 +130,25 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.myTimer.invalidate()
                 self.giveAnswer()
                 print(self.shuffledAnimals)
+                self.player.pause()
             }
-            
         }
+        do
+            
+        {
+            
+            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
+            
+            try self.player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            print("inside do")
+        }
+        catch
+        {
+            //ERROR
+        }
+        
+        self.player.play()
+
         newWord(shuffling: shuffleArray())
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
