@@ -27,9 +27,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
-    var totalwins = 0
-    var totalLosses = 0
     var color = [UIColor]()
+    
+    
 
     var tableView: UITableView = {
        let tableView = UITableView()
@@ -61,18 +61,17 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             if(location.x < width/2){
                 print("Left")
                 right += 1
-                totalLosses += 1
                 color.append(.green)
                 
             } else {
                 print("Right")
                 wrong += 1
-                totalwins += 1
                 color.append(.red)
+                
             }
             
         }
-        updateUI()
+        
     }
   
     func newWord(shuffling: [String]) {
@@ -85,10 +84,12 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func giveAnswer() {
+        let calculations: Double = Double(right)/Double(countTimesTapped)
+        let percentage = Int(calculations * 100)
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        correctAnswer.text = ("You got \(right) animals correct and \(wrong) wrong")
+        correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
@@ -144,10 +145,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    
-    func updateUI () {
-           "Wins:\(totalwins), Losses:" + String(totalLosses)
-    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
