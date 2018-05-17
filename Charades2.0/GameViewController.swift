@@ -31,7 +31,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     var shuffledAnimals = [String]()
     var color = [UIColor]()
     var score = 0
-    
+   
 
     var tableView: UITableView = {
        let tableView = UITableView()
@@ -86,12 +86,16 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func giveAnswer() {
-        let calculations: Double = Double(right)/Double(countTimesTapped)
-        let percentage = Int(calculations * 100)
+        if right >= 0 {
+            let calculations: Double = Double(right)/Double(countTimesTapped)
+            let percentage = Int(calculations * 100)
+              correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
+        } else {
+            correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")
+        }
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
