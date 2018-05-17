@@ -174,9 +174,8 @@
                                     <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="Jwo-eq-hk6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-Yh-sAg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-Yh-sAg">
                                 <rect key="frame" x="104" y="89" width="167" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,8 +202,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.88884411590000001" blue="0.61528312259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HLJ-Yh-sAg" firstAttribute="centerY" secondItem="hh4-7K-cTb" secondAttribute="centerY" id="BMq-0k-rKx"/>
                             <constraint firstItem="MDg-wU-V4S" firstAttribute="bottom" secondItem="Qbu-LR-6aR" secondAttribute="bottom" constant="551" id="HbZ-YT-l2y"/>
                             <constraint firstItem="Qbu-LR-6aR" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="IgU-Ed-hyq"/>
+                            <constraint firstItem="HLJ-Yh-sAg" firstAttribute="centerX" secondItem="hh4-7K-cTb" secondAttribute="centerX" id="Rqz-Q3-DwD"/>
                             <constraint firstItem="MDg-wU-V4S" firstAttribute="trailing" secondItem="Qbu-LR-6aR" secondAttribute="trailing" id="VYB-O0-drz"/>
                             <constraint firstItem="Qbu-LR-6aR" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" id="bh1-CO-uqp"/>
                         </constraints>
