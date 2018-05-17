@@ -30,7 +30,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
     var color = [UIColor]()
-    
+    var score = 0
     
 
     var tableView: UITableView = {
