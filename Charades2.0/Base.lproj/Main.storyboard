@@ -179,8 +179,9 @@
                                     <action selector="startGameButton:" destination="A6Z-wc-ALp" eventType="touchUpInside" id="Jwo-eq-hk6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-Yh-sAg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-Yh-sAg">
                                 <rect key="frame" x="104" y="89" width="167" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -203,13 +204,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jIS-gM-PTJ" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="4Zf-yg-LXY"/>
-                            <constraint firstItem="HLJ-Yh-sAg" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" constant="104" id="8Ht-kB-c9j"/>
-                            <constraint firstItem="MDg-wU-V4S" firstAttribute="bottom" secondItem="uJB-Qn-9Qb" secondAttribute="bottom" constant="235" id="GRF-0Y-QoW"/>
+                            <constraint firstItem="HLJ-Yh-sAg" firstAttribute="centerY" secondItem="hh4-7K-cTb" secondAttribute="centerY" id="BMq-0k-rKx"/>
                             <constraint firstItem="MDg-wU-V4S" firstAttribute="bottom" secondItem="Qbu-LR-6aR" secondAttribute="bottom" constant="551" id="HbZ-YT-l2y"/>
                             <constraint firstItem="Qbu-LR-6aR" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" id="IgU-Ed-hyq"/>
-                            <constraint firstItem="MDg-wU-V4S" firstAttribute="bottom" secondItem="ygy-5C-tcD" secondAttribute="bottom" constant="112" id="O4q-Xs-28c"/>
-                            <constraint firstItem="ygy-5C-tcD" firstAttribute="top" secondItem="hh4-7K-cTb" secondAttribute="topMargin" constant="402" id="UVh-Wr-Qv6"/>
+                            <constraint firstItem="HLJ-Yh-sAg" firstAttribute="centerX" secondItem="hh4-7K-cTb" secondAttribute="centerX" id="Rqz-Q3-DwD"/>
                             <constraint firstItem="MDg-wU-V4S" firstAttribute="trailing" secondItem="Qbu-LR-6aR" secondAttribute="trailing" id="VYB-O0-drz"/>
                             <constraint firstItem="ygy-5C-tcD" firstAttribute="leading" secondItem="MDg-wU-V4S" secondAttribute="leading" constant="76" id="Yp4-QV-Sp5"/>
                             <constraint firstItem="Qbu-LR-6aR" firstAttribute="top" secondItem="MDg-wU-V4S" secondAttribute="top" id="bh1-CO-uqp"/>
