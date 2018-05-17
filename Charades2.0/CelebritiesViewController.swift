@@ -62,7 +62,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
                 print(self.shuffledPeople)
             }
         }
-        celebrityGameLabel.text = ("\(FamousPeople[0])")
+        celebrityNewWord(shuffling: shuffleArray())
         celebrityStartGameButton.isHidden = true
         celebrityGameLabel.isHidden = false
         celebrityTapGesture.isEnabled = true
@@ -79,13 +79,13 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
             
             if(location.x < width/2){
                 print("Left")
-                celebrityWrong += 1
-                color.append(.red)
+                celebrityRight += 1
+                color.append(.green)
             }
             else {
                 print("Right")
-                celebrityRight += 1
-                color.append(.green)
+                celebrityWrong += 1
+                color.append(.red)
             }
         }
     }
@@ -137,12 +137,6 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         cell?.textLabel?.textColor = color[indexPath.row]
         return cell!
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    
-    }
-
 }
 
 

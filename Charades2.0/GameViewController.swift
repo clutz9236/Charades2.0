@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var player:AVAudioPlayer = AVAudioPlayer()
     
 
     @IBOutlet weak var tapStack: UIStackView!
@@ -27,9 +29,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     var shuffledAnimals = [String]()
-    var totalwins = 0
-    var totalLosses = 0
     var color = [UIColor]()
+    
+    
 
     var tableView: UITableView = {
        let tableView = UITableView()
@@ -60,18 +62,18 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             if(location.x < width/2){
                 print("Left")
-                wrong += 1
-                totalLosses += 1
-                color.append(.red)
+                right += 1
+                color.append(.green)
                 
             } else {
                 print("Right")
-                right += 1
-                totalwins += 1
-                color.append(.green)
+                wrong += 1
+                color.append(.red)
+                
             }
             
         }
+        
     }
   
     func newWord(shuffling: [String]) {
@@ -84,10 +86,12 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func giveAnswer() {
+        let calculations: Double = Double(right)/Double(countTimesTapped)
+        let percentage = Int(calculations * 100)
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        correctAnswer.text = ("You got \(right) animals correct and \(wrong) wrong")
+        correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
@@ -101,6 +105,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func shuffleArray() -> [String] {
         var randomNumber: Int
         var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
+        
         var upperLimit = AnimalWords.count
         
         for _ in 1...AnimalWords.count {
@@ -114,6 +119,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
    
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
+    
+        
         
         myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
             self.counter -= 1
@@ -123,17 +130,40 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.myTimer.invalidate()
                 self.giveAnswer()
                 print(self.shuffledAnimals)
+                self.player.pause()
             }
-            
         }
-        gameLabel.text = ("\(AnimalWords[0])")
+        do
+            
+        {
+            
+            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
+            
+            try self.player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            print("inside do")
+        }
+        catch
+        {
+            //ERROR
+        }
+        
+        self.player.play()
+
+        newWord(shuffling: shuffleArray())
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
         tapGestureOutlet.isEnabled = true
         tapStack.isUserInteractionEnabled = true
         tapStack.addGestureRecognizer(tapGestureOutlet)
-
     }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "animalSegue" {
+                
+        }
+    }
+    
+    
     
     
     
