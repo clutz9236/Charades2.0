@@ -12,7 +12,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
 
   
    
-    @IBOutlet weak var tapStack: UIStackView!
+    @IBOutlet weak var tapStackView: UIStackView!
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!

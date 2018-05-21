@@ -86,6 +86,7 @@
                         <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="sZG-ja-q7N"/>
                         <outlet property="rightAnswer" destination="6nM-uo-RiS" id="pbJ-cj-i4B"/>
                         <outlet property="tapStack" destination="7iQ-eM-M4c" id="JDI-lm-pxQ"/>
+                        <outlet property="tapStackView" destination="7iQ-eM-M4c" id="d5u-Zk-O8c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="now-ES-281" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,7 +335,7 @@
         <!--Harry Potter View Controller-->
         <scene sceneID="K8u-wv-te1">
             <objects>
-                <viewController id="cTp-2a-af4" customClass="harryPotterViewController" sceneMemberID="viewController">
+                <viewController id="cTp-2a-af4" customClass="HarryPotterViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zfp-5Y-giK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -399,10 +400,13 @@
                     <connections>
                         <outlet property="TimerLabel" destination="ni6-ae-aVb" id="AJe-f0-pkd"/>
                         <outlet property="correctAnswer" destination="CvQ-2Y-eQU" id="rWY-Hr-YcF"/>
-                        <outlet property="gameLabel" destination="xNF-tt-VVv" id="1rj-Qe-q0h"/>
-                        <outlet property="startGameOutlet" destination="d36-1E-QZK" id="RFn-Ni-XK1"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="4yz-tF-ybZ"/>
+                        <outlet property="gameLabel" destination="xNF-tt-VVv" id="31A-W1-7QW"/>
+                        <outlet property="resultsLabel" destination="CvQ-2Y-eQU" id="ybn-td-vid"/>
+                        <outlet property="startGameOutlet" destination="d36-1E-QZK" id="teN-6e-61S"/>
+                        <outlet property="tapGestureOutlet" destination="0Us-S7-EzG" id="wpF-Wk-6lh"/>
                         <outlet property="tapStack" destination="hQn-Ox-Rbf" id="2Yo-vM-crF"/>
+                        <outlet property="tapStackView" destination="hQn-Ox-Rbf" id="KjB-cv-hnl"/>
+                        <outlet property="timerLabel" destination="ni6-ae-aVb" id="zOZ-Dk-Kcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGN-EX-gPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
