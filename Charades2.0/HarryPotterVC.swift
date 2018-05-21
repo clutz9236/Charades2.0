@@ -116,13 +116,15 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
-        var upperLimit = AnimalWords.count
+        var harryPotter = ["Harry Potter", "Voldemort", "Dumbledore", "Draco Malfoy", "Ron Weasley", "Hermione Granger", "Salazar Slytherin", "Godric Gryffindor", "Rowena Ravenclaw", "Helga Hufflepuff", "Percy Weasley", "Severus Snape", "Minerva McGonagall", "Lavendar Brown", "Seamus Finnegan", "Neville Longbottom", "Rubeus Hagrid", "Fred Weasley", "George Weasley", "Molly Weasley", "Ginny Weasley", "Bill Weasley", "Charlie Weasley", "Arthur Weasley", "Oliver Wood", "Katie Bell", "Rita Skeeter", "Lucius Malfoy", "Bellatrix Lestrange", "Narcissa Malfoy", "Nagini", "Dean Thomas", "Lily Potter", "James Potter",  "Sirius Black", "Remus Lupin", "Regulus Black", "Dobby", "Buckbeak", "Hedwig", "Mad-eye Moody", "Philosopher's Stone", "Chamber of Secrets", "Prisoner of Azkaban", "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince", "Deathly Hallow", "Alohomora", "Lumos", "Wingardium Leviosa", "Expelliarmus", "Sectumsempra", "Obliviate", "Nox", "Cedric Diggory", "Cho Chang", "Penelope Clearwater", "Dudley Dursley", "Vernon Dursley", "Petunia Dursley", "Fleur Delacour", "Argus Filch", "Cornelius Fudge", "Three Broomsticks", "Filius Flitwick", "Fenrir Greyback", "Gellert Grindelwald", "Rolands Hooch", "Viktor Krum", "Gilderoy Lockhart", "Alice Longbottom", "Luna Lovegood", "Garrick Ollivander", "Peter Pettigrew", "The Marauders", "Poppy Pomfrey", "Helena Ravenclaw", "Kingsley Shacklebolt", "Nymphadora Tonks", "Sybill Trelawney", "Dolores Umbridge", "Moaning Myrtle", "Crookshanks"]
         
-        for _ in 1...AnimalWords.count {
+        
+        var upperLimit = harryPotter.count
+        
+        for _ in 1...harryPotter.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledHarryPotter.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledHarryPotter.append(harryPotter[randomNumber])
+            harryPotter.remove(at: randomNumber)
             upperLimit -= 1
         }
         return shuffledHarryPotter
