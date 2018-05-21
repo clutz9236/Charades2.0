@@ -9,6 +9,31 @@
 import UIKit
 import AVFoundation
 
+
+extension MutableCollection {
+    /// Shuffles the contents of this collection.
+    mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (firstUnshuffled, unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
+            // Change `Int` in the next line to `IndexDistance` in < Swift 4.1
+            let d: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            let i = index(firstUnshuffled, offsetBy: d)
+            swapAt(firstUnshuffled, i)
+        }
+    }
+}
+
+extension Sequence {
+    /// Returns an array with the contents of this sequence, shuffled.
+    func shuffled() -> [Element] {
+        var result = Array(self)
+        result.shuffle()
+        return result
+    }
+}
+
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var player:AVAudioPlayer = AVAudioPlayer()
     
@@ -28,10 +53,10 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
-    var shuffledAnimals = [String]()
+    var shuffledAnimals: Dictionary = [String, String, String]
     var color = [UIColor]()
     var score = 0
-   
+    var buttonTag = 0
 
     var tableView: UITableView = {
        let tableView = UITableView()
@@ -52,6 +77,14 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
             
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "animalSegue" {
+            buttonTag = 1
+        } else if segue.identifier == "celebritySegue" {
+            buttonTag = 2
+        }
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
@@ -88,7 +121,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func giveAnswer() {
         if right >= 0 {
             let calculations: Double = Double(right)/Double(countTimesTapped)
-            let percentage = Int(calculations * 100)
+            let percentage = Double(calculations * 100)
               correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         } else {
             correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")
@@ -106,21 +139,28 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func shuffleArray() -> [String] {
+    func shuffleArray(animals: inout Array<String>, celebrities: inout Array<String>) -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
+        var upperLimit = animals.count
         
-        var upperLimit = AnimalWords.count
-        
-        for _ in 1...AnimalWords.count {
+        for _ in 1...animals.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledAnimals.append(animals[randomNumber])
+            animals.remove(at: randomNumber)
             upperLimit -= 1
         }
+        
+        for _ in 1...celebrities.count {
+            randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
+            shuffledAnimals.append(animals[randomNumber])
+            animals.remove(at: randomNumber)
+            upperLimit -= 1
+        }
+        
         return shuffledAnimals
     }
    
+    
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
     
@@ -160,15 +200,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         tapStack.isUserInteractionEnabled = true
         tapStack.addGestureRecognizer(tapGestureOutlet)
     }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "animalSegue" {
-                
-        }
-    }
-    
-    
-    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
