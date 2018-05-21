@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		306F1DCE20AC8C820048B16C /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F1DCD20AC8C820048B16C /* music.mp3 */; };
+		30A6576220AF34A8009AE636 /* Potter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30A6576120AF34A8009AE636 /* Potter.mp3 */; };
 		6F922CE7208A4F36008E28F9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F922CE6208A4F36008E28F9 /* GameViewController.swift */; };
 		ABD7ABB120AB3B120064A3F6 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7ABB020AB3B120064A3F6 /* game.swift */; };
 		E3625EBE2088F67400785A88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3625EBD2088F67400785A88 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		306F1DCD20AC8C820048B16C /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		30A6576120AF34A8009AE636 /* Potter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Potter.mp3; sourceTree = "<group>"; };
 		6F922CE6208A4F36008E28F9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		ABD7ABB020AB3B120064A3F6 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		E3625EBA2088F67400785A88 /* Charades2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charades2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */,
 				E3625EC12088F67400785A88 /* Main.storyboard */,
 				306F1DCD20AC8C820048B16C /* music.mp3 */,
+				30A6576120AF34A8009AE636 /* Potter.mp3 */,
 				E3625EC42088F67400785A88 /* Assets.xcassets */,
 				E3625EC62088F67400785A88 /* LaunchScreen.storyboard */,
 				E3625EC92088F67400785A88 /* Info.plist */,
@@ -139,6 +142,7 @@
 				E3625EC82088F67400785A88 /* LaunchScreen.storyboard in Resources */,
 				E3625EC52088F67400785A88 /* Assets.xcassets in Resources */,
 				E3625EC32088F67400785A88 /* Main.storyboard in Resources */,
+				30A6576220AF34A8009AE636 /* Potter.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
