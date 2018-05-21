@@ -398,13 +398,10 @@
                         <viewLayoutGuide key="safeArea" id="Kmp-no-6YR"/>
                     </view>
                     <connections>
-                        <outlet property="TimerLabel" destination="ni6-ae-aVb" id="AJe-f0-pkd"/>
-                        <outlet property="correctAnswer" destination="CvQ-2Y-eQU" id="rWY-Hr-YcF"/>
                         <outlet property="gameLabel" destination="xNF-tt-VVv" id="31A-W1-7QW"/>
                         <outlet property="resultsLabel" destination="CvQ-2Y-eQU" id="ybn-td-vid"/>
                         <outlet property="startGameOutlet" destination="d36-1E-QZK" id="teN-6e-61S"/>
                         <outlet property="tapGestureOutlet" destination="0Us-S7-EzG" id="wpF-Wk-6lh"/>
-                        <outlet property="tapStack" destination="hQn-Ox-Rbf" id="2Yo-vM-crF"/>
                         <outlet property="tapStackView" destination="hQn-Ox-Rbf" id="KjB-cv-hnl"/>
                         <outlet property="timerLabel" destination="ni6-ae-aVb" id="zOZ-Dk-Kcb"/>
                     </connections>
