@@ -43,7 +43,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
-        tapStack.isUserInteractionEnabled = false
+        tapStackView.isUserInteractionEnabled = false
         rightAnswer.isHidden = true
     }
     
@@ -66,8 +66,8 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         celebrityStartGameButton.isHidden = true
         celebrityGameLabel.isHidden = false
         celebrityTapGesture.isEnabled = true
-        tapStack.isUserInteractionEnabled = true
-        tapStack.addGestureRecognizer(celebrityTapGesture)
+        tapStackView.isUserInteractionEnabled = true
+        tapStackView.addGestureRecognizer(celebrityTapGesture)
         
     }
     
@@ -111,7 +111,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
             rightAnswer.text = ("You got \(celebrityRight) correct, \(celebrityWrong) incorrect, and 0% right.")
         }
         celebrityTapGesture.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
+        tapStackView.isUserInteractionEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
