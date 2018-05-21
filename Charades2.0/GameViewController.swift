@@ -53,7 +53,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
-    var shuffledAnimals: Dictionary = [String, String, String]
+    var shuffledAnimals = [String]()
     var color = [UIColor]()
     var score = 0
     var buttonTag = 0
@@ -139,24 +139,17 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    func shuffleArray(animals: inout Array<String>, celebrities: inout Array<String>) -> [String] {
+    func shuffleArray() -> [String] {
         var randomNumber: Int
-        var upperLimit = animals.count
-        
-        for _ in 1...animals.count {
+        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
+        var upperLimit = AnimalWords.count
+
+        for _ in 1...AnimalWords.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(animals[randomNumber])
-            animals.remove(at: randomNumber)
+            shuffledAnimals.append(AnimalWords[randomNumber])
+            AnimalWords.remove(at: randomNumber)
             upperLimit -= 1
         }
-        
-        for _ in 1...celebrities.count {
-            randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(animals[randomNumber])
-            animals.remove(at: randomNumber)
-            upperLimit -= 1
-        }
-        
         return shuffledAnimals
     }
    
@@ -164,8 +157,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func startGameButton(_ sender: Any) {
         TimerLabel.text = "\(counter)"
     
-        
-        
         myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
             self.counter -= 1
             self.TimerLabel.text = "\(self.counter)"
