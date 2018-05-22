@@ -96,7 +96,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     func giveAnswer() {
         if right >= 0 {
             let calculations: Double = Double(right)/Double(countTimesTapped)
-            let percentage = Double(calculations * 100)
+            let percentage = round(calculations * 100)
             resultsLabel.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         } else {
             resultsLabel.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")
