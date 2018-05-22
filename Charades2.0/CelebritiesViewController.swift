@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var player:AVAudioPlayer = AVAudioPlayer()
 
   
    
@@ -60,8 +62,23 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
                 self.celebrityMyTimer.invalidate()
                 self.giveAnswer()
                 print(self.shuffledPeople)
-            }
+                self.player.pause()            }
         }
+        do
+            
+        {
+            
+            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
+            
+            try self.player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+            print("inside do")
+        }
+        catch
+        {
+            //ERROR
+        }
+        
+        
         celebrityNewWord(shuffling: shuffleArray())
         celebrityStartGameButton.isHidden = true
         celebrityGameLabel.isHidden = false

@@ -39,7 +39,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     }()
     var cellId = "cell"
     
-    let harryPotterWords = [Harry Potter, Voldemort, Dumbledore, Draco Malfoy, Ron Weasley, Hermione Granger, Salazar Slytherin, Godric Gryffindor, Rowena Ravenclaw, Helga Hufflepuff, Percy Weasley, Severus Snape, Minerva McGonagall, Lavendar Brown, Seamus Finnegan, Neville Longbottom, Rubeus Hagrid, Fred Weasley, George Weasley, Molly Weasley, Ginny Weasley, Bill Weasley, Charlie Weasley, Arthur Weasley, Oliver Wood, Katie Bell, Rita Skeeter, Lucius Malfoy, Bellatrix Lestrange, Narcissa Malfoy, Nagini, Dean Thomas, Lily Potter, James Potter,  Sirius Black, Remus Lupin, Regulus Black, Dobby, Buckbeak, Hedwig, Mad-eye Moody, Philosopher's Stone, Chamber of Secrets, Prisoner of Azkaban, Goblet of Fire, Order of the Phoenix, Half-Blood Prince, Deathly Hallow, Alohomora, Lumos, Wingardium Leviosa, Expelliarmus, Sectumsempra,Obliviate]
+    let harryPotterWords = ["Harry Potter, Voldemort, Dumbledore, Draco Malfoy, Ron Weasley, Hermione Granger, Salazar Slytherin, Godric Gryffindor, Rowena Ravenclaw, Helga Hufflepuff, Percy Weasley, Severus Snape, Minerva McGonagall, Lavendar Brown, Seamus Finnegan, Neville Longbottom, Rubeus Hagrid, Fred Weasley, George Weasley, Molly Weasley, Ginny Weasley, Bill Weasley, Charlie Weasley, Arthur Weasley, Oliver Wood, Katie Bell, Rita Skeeter, Lucius Malfoy, Bellatrix Lestrange, Narcissa Malfoy, Nagini, Dean Thomas, Lily Potter, James Potter,  Sirius Black, Remus Lupin, Regulus Black, Dobby, Buckbeak, Hedwig, Mad-eye Moody, Philosopher's Stone, Chamber of Secrets, Prisoner of Azkaban, Goblet of Fire, Order of the Phoenix, Half-Blood Prince, Deathly Hallow, Alohomora, Lumos, Wingardium Leviosa, Expelliarmus, Sectumsempra, Obliviate"]
 
     
     
@@ -86,7 +86,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func newWord(shuffling: [String]) {
-        if AnimalWords.count > countTimesTapped {
+        if harryPotterWords.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
@@ -148,7 +148,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
             
         {
             
-            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
+            let audioPath = Bundle.main.path(forResource: "Potter", ofType: "mp3")
             
             try self.player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             print("inside do")
