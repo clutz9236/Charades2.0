@@ -85,7 +85,6 @@
                         <outlet property="celebrityTapGesture" destination="1qf-mQ-X7H" id="mFA-z4-SD4"/>
                         <outlet property="celebrityTimerLabel" destination="TlN-Wm-kg8" id="sZG-ja-q7N"/>
                         <outlet property="rightAnswer" destination="6nM-uo-RiS" id="pbJ-cj-i4B"/>
-                        <outlet property="tapStack" destination="7iQ-eM-M4c" id="JDI-lm-pxQ"/>
                         <outlet property="tapStackView" destination="7iQ-eM-M4c" id="d5u-Zk-O8c"/>
                     </connections>
                 </viewController>
