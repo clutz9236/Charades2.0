@@ -10,26 +10,26 @@ import UIKit
 
 class AvengersViewController: UIViewController {
 
+    
+    
+    let avengersWords = ["Captain America", "Falcon", "Ant-man", "Wasp", "Vision", "Scarlet Witch", "Hulk", "Thor", "Phil Coulson", "Bucky Barnes", "Spiderman", "Hawkeye", "Black Panther", "Wakanda", "Thanos", "Proxima Midnight", "The Ebony Maw", "Corvus Glaive", "Black Dwarf", "Loki", "Rocket", "Groot", "Star Lord", "Gamora","Drax", "Mantis", "Black Widow", "Ronan The Accuser", "Ego", "Deadpool", "Nebula", "Quicksilver", "Captain Marvel", "Daredevil", "War Machine", "Apocalypse"]
+
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
