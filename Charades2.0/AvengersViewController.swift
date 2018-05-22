@@ -15,6 +15,13 @@ class AvengersViewController: UIViewController {
     var myTimer: Timer!
     var right = 0
     var wrong = 0
+    var countTimesTapped = 0
+    let width = UIScreen.main.bounds.width
+    let height = UIScreen.main.bounds.height
+    var shuffledAvengers = [String]()
+    var color = [UIColor]()
+    var score = 0
+    var buttonTag = 0
     
     
     let avengersWords = ["Captain America", "Falcon", "Ant-man", "Wasp", "Vision", "Scarlet Witch", "Hulk", "Thor", "Phil Coulson", "Bucky Barnes", "Spiderman", "Hawkeye", "Black Panther", "Wakanda", "Thanos", "Proxima Midnight", "The Ebony Maw", "Corvus Glaive", "Black Dwarf", "Loki", "Rocket", "Groot", "Star Lord", "Gamora","Drax", "Mantis", "Black Widow", "Ronan The Accuser", "Ego", "Deadpool", "Nebula", "Quicksilver", "Captain Marvel", "Daredevil", "War Machine", "Apocalypse"]
