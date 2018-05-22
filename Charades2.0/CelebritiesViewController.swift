@@ -14,7 +14,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
 
   
    
-    @IBOutlet weak var tapStack: UIStackView!
+    @IBOutlet weak var tapStackView: UIStackView!
     @IBOutlet weak var celebrityStartGameButton: UIButton!
     @IBOutlet weak var celebrityGameLabel: UILabel!
     @IBOutlet weak var celebrityTimerLabel: UILabel!
@@ -45,7 +45,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
 
         celebrityGameLabel.isHidden = true
-        tapStack.isUserInteractionEnabled = false
+        tapStackView.isUserInteractionEnabled = false
         rightAnswer.isHidden = true
     }
     
@@ -83,8 +83,8 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         celebrityStartGameButton.isHidden = true
         celebrityGameLabel.isHidden = false
         celebrityTapGesture.isEnabled = true
-        tapStack.isUserInteractionEnabled = true
-        tapStack.addGestureRecognizer(celebrityTapGesture)
+        tapStackView.isUserInteractionEnabled = true
+        tapStackView.addGestureRecognizer(celebrityTapGesture)
         
     }
     
@@ -122,7 +122,7 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         celebrityTimerLabel.isHidden = true
         rightAnswer.text = ("You got \(celebrityRight) correct and \(celebrityWrong) wrong")
         celebrityTapGesture.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
+        tapStackView.isUserInteractionEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)

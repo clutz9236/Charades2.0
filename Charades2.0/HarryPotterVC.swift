@@ -13,13 +13,12 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     var player:AVAudioPlayer = AVAudioPlayer()
     
     
-    @IBOutlet weak var tapStack: UIStackView!
-    @IBOutlet weak var startGameOutlet: UIButton!
     @IBOutlet weak var gameLabel: UILabel!
-    @IBOutlet weak var TimerLabel: UILabel!
+    @IBOutlet weak var startGameOutlet: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var tapStackView: UIStackView!
     @IBOutlet var tapGestureOutlet: UITapGestureRecognizer!
-    @IBOutlet weak var correctAnswer: UILabel!
-    
     
     var counter = 45
     var myTimer: Timer!
@@ -28,7 +27,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     var countTimesTapped = 0
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
-    var shuffledAnimals = [String]()
+    var shuffledHarryPotter = [String]()
     var color = [UIColor]()
     var score = 0
     var buttonTag = 0
@@ -50,8 +49,8 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
         
         gameLabel.isHidden = true
         tapGestureOutlet.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
-        correctAnswer.isHidden = true
+        tapStackView.isUserInteractionEnabled = false
+        resultsLabel.isHidden = true
         
     }
     
@@ -90,7 +89,7 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
-            print(shuffledAnimals)
+            print(shuffledHarryPotter)
         }
     }
     
@@ -98,15 +97,15 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
         if right >= 0 {
             let calculations: Double = Double(right)/Double(countTimesTapped)
             let percentage = Double(calculations * 100)
-            correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
+            resultsLabel.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         } else {
-            correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")
+            resultsLabel.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")
         }
-        correctAnswer.isHidden = false
+        resultsLabel.isHidden = false
         gameLabel.isHidden = true
-        TimerLabel.isHidden = true
+        timerLabel.isHidden = true
         tapGestureOutlet.isEnabled = false
-        tapStack.isUserInteractionEnabled = false
+        tapStackView.isUserInteractionEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = CGRect(x: 0, y: height - 550, width: width, height: height)
@@ -117,30 +116,32 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo"]
-        var upperLimit = AnimalWords.count
+        var harryPotter = ["Harry Potter", "Voldemort", "Dumbledore", "Draco Malfoy", "Ron Weasley", "Hermione Granger", "Salazar Slytherin", "Godric Gryffindor", "Rowena Ravenclaw", "Helga Hufflepuff", "Percy Weasley", "Severus Snape", "Minerva McGonagall", "Lavendar Brown", "Seamus Finnegan", "Neville Longbottom", "Rubeus Hagrid", "Fred Weasley", "George Weasley", "Molly Weasley", "Ginny Weasley", "Bill Weasley", "Charlie Weasley", "Arthur Weasley", "Oliver Wood", "Katie Bell", "Rita Skeeter", "Lucius Malfoy", "Bellatrix Lestrange", "Narcissa Malfoy", "Nagini", "Dean Thomas", "Lily Potter", "James Potter",  "Sirius Black", "Remus Lupin", "Regulus Black", "Dobby", "Buckbeak", "Hedwig", "Mad-eye Moody", "Philosopher's Stone", "Chamber of Secrets", "Prisoner of Azkaban", "Goblet of Fire", "Order of the Phoenix", "Half-Blood Prince", "Deathly Hallow", "Alohomora", "Lumos", "Wingardium Leviosa", "Expelliarmus", "Sectumsempra", "Obliviate", "Nox", "Cedric Diggory", "Cho Chang", "Penelope Clearwater", "Dudley Dursley", "Vernon Dursley", "Petunia Dursley", "Fleur Delacour", "Argus Filch", "Cornelius Fudge", "Three Broomsticks", "Filius Flitwick", "Fenrir Greyback", "Gellert Grindelwald", "Rolands Hooch", "Viktor Krum", "Gilderoy Lockhart", "Alice Longbottom", "Luna Lovegood", "Garrick Ollivander", "Peter Pettigrew", "The Marauders", "Poppy Pomfrey", "Helena Ravenclaw", "Kingsley Shacklebolt", "Nymphadora Tonks", "Sybill Trelawney", "Dolores Umbridge", "Moaning Myrtle", "Crookshanks"]
         
-        for _ in 1...AnimalWords.count {
+        
+        var upperLimit = harryPotter.count
+        
+        for _ in 1...harryPotter.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledHarryPotter.append(harryPotter[randomNumber])
+            harryPotter.remove(at: randomNumber)
             upperLimit -= 1
         }
-        return shuffledAnimals
+        return shuffledHarryPotter
     }
     
     
     @IBAction func startGameButton(_ sender: Any) {
-        TimerLabel.text = "\(counter)"
+        timerLabel.text = "\(counter)"
         
         myTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
             self.counter -= 1
-            self.TimerLabel.text = "\(self.counter)"
+            self.timerLabel.text = "\(self.counter)"
             
             if self.counter == 0 {
                 self.myTimer.invalidate()
                 self.giveAnswer()
-                print(self.shuffledAnimals)
+                print(self.shuffledHarryPotter)
                 self.player.pause()
             }
         }
@@ -164,8 +165,8 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
         tapGestureOutlet.isEnabled = true
-        tapStack.isUserInteractionEnabled = true
-        tapStack.addGestureRecognizer(tapGestureOutlet)
+        tapStackView.isUserInteractionEnabled = true
+        tapStackView.addGestureRecognizer(tapGestureOutlet)
     }
     
     
