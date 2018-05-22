@@ -96,7 +96,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     func giveAnswer() {
         if right >= 0 {
             let calculations: Double = Double(right)/Double(countTimesTapped)
-            let percentage = Double(calculations * 100)
+            let percentage = round(calculations * 100)
               correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and \(percentage)% right.")
         } else {
             correctAnswer.text = ("You got \(right) correct, \(wrong) incorrect, and 0% right.")

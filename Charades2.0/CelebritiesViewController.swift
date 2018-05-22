@@ -120,7 +120,13 @@ class CelebritiesViewController: UIViewController, UITableViewDelegate, UITableV
         rightAnswer.isHidden = false
         celebrityGameLabel.isHidden = true
         celebrityTimerLabel.isHidden = true
-        rightAnswer.text = ("You got \(celebrityRight) correct and \(celebrityWrong) wrong")
+        if celebrityRight >= 0 {
+            let calculations: Double = Double(celebrityRight)/Double(celebrityCountTimesTapped)
+            let percentage = round(calculations * 100)
+            rightAnswer.text = ("You got \(celebrityRight) correct, \(celebrityWrong) incorrect, and \(percentage)% right.")
+        } else {
+            rightAnswer.text = ("You got \(celebrityRight) correct, \(celebrityWrong) incorrect, and 0% right.")
+        }
         celebrityTapGesture.isEnabled = false
         tapStackView.isUserInteractionEnabled = false
         tableView.delegate = self
