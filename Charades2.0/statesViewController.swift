@@ -38,7 +38,7 @@ class statesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }()
     var cellId = "cell"
     
-    let states = [""]
+    let states = ["Washington", "Montana", "North Dakota", "Minnesota", "Wisconsin", "Michigan", "Ohio", "Pennsylvania", "New York", "New Hampshire", "Maine", "Massachusetts", "Delaware", "Rhode Island", "Maryland", "Vermont", "New Jersey", "Connecitcut", "Virginia", "West Virginia", "North Carolina", "South Carolina", "Georgia", "Florida", "Alabama", "Mississippi", "Louisiana", "Texas", "New Mexico", "Arizona", "California", "Nevads", "Utah", "Colorado", "Kansas", "Missouri", "Illinois", "Indiana", "Kentucky", "Tennessee", "Oregon", "Wyoming", "South Dakota", "Oklahoma", "Arkansas", "Alaska", "Hawaii"]
     
     
     
@@ -107,7 +107,7 @@ class statesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var states = [""]
+        var states = ["Washington", "Montana", "North Dakota", "Minnesota", "Wisconsin", "Michigan", "Ohio", "Pennsylvania", "New York", "New Hampshire", "Maine", "Massachusetts", "Delaware", "Rhode Island", "Maryland", "Vermont", "New Jersey", "Connecitcut", "Virginia", "West Virginia", "North Carolina", "South Carolina", "Georgia", "Florida", "Alabama", "Mississippi", "Louisiana", "Texas", "New Mexico", "Arizona", "California", "Nevads", "Utah", "Colorado", "Kansas", "Missouri", "Illinois", "Indiana", "Kentucky", "Tennessee", "Oregon", "Wyoming", "South Dakota", "Oklahoma", "Arkansas", "Alaska", "Hawaii"]
         var upperLimit = states.count
         
         for _ in 1...states.count {
