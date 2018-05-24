@@ -48,7 +48,6 @@ class HarryPotterViewController: UIViewController, UITableViewDelegate, UITableV
         
         
         gameLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStackView.isUserInteractionEnabled = false
         resultsLabel.isHidden = true
         

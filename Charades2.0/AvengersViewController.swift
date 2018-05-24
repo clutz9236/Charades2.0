@@ -48,7 +48,6 @@ class avengersViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         gameLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
         
