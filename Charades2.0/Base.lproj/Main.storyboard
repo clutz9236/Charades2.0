@@ -102,144 +102,114 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecs-9C-qyB">
-                                <rect key="frame" x="168" y="617" width="38" height="30"/>
-                                <state key="normal" title="Rules"/>
-                                <connections>
-                                    <action selector="rulesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHl-gb-Bh1"/>
-                                    <segue destination="2eu-k9-sre" kind="show" identifier="results segue" id="zGd-nv-bjJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
-                                <rect key="frame" x="173" y="427" width="129" height="30"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-gs-EOS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
+                                        <rect key="frame" x="151" y="506" width="73" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="73" id="VTH-aO-c0P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="songs"/>
+                                        <connections>
+                                            <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
+                                        <rect key="frame" x="151" y="259" width="73" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="states"/>
+                                        <connections>
+                                            <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
+                                        <rect key="frame" x="115" y="437" width="144" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Harry Potter"/>
+                                        <connections>
+                                            <segue destination="cTp-2a-af4" kind="show" identifier="harryPotterSegue" id="wmF-Bm-gvY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
+                                        <rect key="frame" x="137" y="586" width="101" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Animals"/>
+                                        <connections>
+                                            <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
+                                            <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
+                                        <rect key="frame" x="130" y="645" width="129" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="47m-Wg-oKD"/>
+                                            <constraint firstAttribute="height" constant="30" id="OlC-np-2zy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Celebrities"/>
+                                        <connections>
+                                            <segue destination="CaM-0A-KHK" kind="show" id="Bdw-3O-aki"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
+                                        <rect key="frame" x="131" y="373" width="113" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="113" id="MKR-Bq-3nh"/>
+                                            <constraint firstAttribute="height" constant="46" id="fXP-zT-hJw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Avengers"/>
+                                        <connections>
+                                            <segue destination="zXt-M1-3Ko" kind="showDetail" id="QAq-d7-HV4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="E4p-zY-9AU"/>
-                                    <constraint firstAttribute="height" constant="30" id="ZUJ-sn-cVh"/>
+                                    <constraint firstItem="Dya-yE-yw5" firstAttribute="top" secondItem="rFA-jZ-6cr" secondAttribute="bottom" constant="18" id="3dg-xq-gaY"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="leading" secondItem="B4I-S7-oBJ" secondAttribute="leading" id="6LJ-xb-hh7"/>
+                                    <constraint firstAttribute="trailing" secondItem="26h-52-jom" secondAttribute="trailing" constant="137" id="6RZ-5W-Duu"/>
+                                    <constraint firstItem="rFA-jZ-6cr" firstAttribute="top" secondItem="B4I-S7-oBJ" secondAttribute="bottom" constant="68" id="8Ps-aY-mu9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dya-yE-yw5" secondAttribute="trailing" constant="116" id="BrV-FS-DeY"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="top" secondItem="Dya-yE-yw5" secondAttribute="bottom" constant="23" id="Bv9-sG-5qJ"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" constant="151" id="E1v-Dr-lWK"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="top" secondItem="Dya-yE-yw5" secondAttribute="bottom" constant="23" id="KyP-rl-dvr"/>
+                                    <constraint firstItem="rFA-jZ-6cr" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" constant="131" id="OJt-9O-gkL"/>
+                                    <constraint firstAttribute="bottom" secondItem="26h-52-jom" secondAttribute="bottom" constant="118" id="Rc2-a8-Yxz"/>
+                                    <constraint firstItem="26h-52-jom" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" constant="137" id="SrF-sR-tQB"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="centerX" secondItem="rFA-jZ-6cr" secondAttribute="centerX" id="TRy-Yz-kVY"/>
+                                    <constraint firstAttribute="bottom" secondItem="dnK-Fd-TV7" secondAttribute="bottom" constant="75" id="VQ2-DC-vE9"/>
+                                    <constraint firstItem="Dya-yE-yw5" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" constant="115" id="a1E-YN-HTN"/>
+                                    <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="gVK-gs-EOS" secondAttribute="top" constant="586" id="e0M-bq-xn8"/>
+                                    <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="kE3-hf-9uY" secondAttribute="bottom" constant="34" id="fhB-pM-Gkx"/>
+                                    <constraint firstItem="dnK-Fd-TV7" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" constant="130" id="m4d-oq-Bb2"/>
+                                    <constraint firstAttribute="trailing" secondItem="dnK-Fd-TV7" secondAttribute="trailing" constant="116" id="q9q-NV-MBP"/>
+                                    <constraint firstAttribute="trailing" secondItem="kE3-hf-9uY" secondAttribute="trailing" constant="151" id="ra9-Mr-2tW"/>
+                                    <constraint firstItem="kE3-hf-9uY" firstAttribute="centerX" secondItem="Dya-yE-yw5" secondAttribute="centerX" id="tdL-fc-qA8"/>
+                                    <constraint firstAttribute="trailing" secondItem="rFA-jZ-6cr" secondAttribute="trailing" constant="131" id="wh9-w1-a3i"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Celebrities"/>
-                                <connections>
-                                    <segue destination="CaM-0A-KHK" kind="show" id="Bdw-3O-aki"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
-                                <rect key="frame" x="16" y="420" width="117" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="8mb-is-okA"/>
-                                    <constraint firstAttribute="width" constant="117" id="HiW-y2-cUV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Animals"/>
-                                <connections>
-                                    <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
-                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="charades pic" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-5X-Hqv">
-                                <rect key="frame" x="60" y="64" width="242" height="348"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="NQC-rT-v7H"/>
-                                    <constraint firstAttribute="height" constant="348" id="cZe-ce-eq8"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
-                                <rect key="frame" x="16" y="482" width="144" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="3m2-Yt-Yco"/>
-                                    <constraint firstAttribute="width" constant="144" id="W23-iw-Wfc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Harry Potter"/>
-                                <connections>
-                                    <segue destination="cTp-2a-af4" kind="show" identifier="harryPotterSegue" id="wmF-Bm-gvY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
-                                <rect key="frame" x="183" y="484" width="113" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="C5n-rl-hJj"/>
-                                    <constraint firstAttribute="height" constant="46" id="hx2-Ur-VPD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Avengers"/>
-                                <connections>
-                                    <segue destination="zXt-M1-3Ko" kind="showDetail" id="QAq-d7-HV4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
-                                <rect key="frame" x="70" y="549" width="73" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="APK-oz-XDa"/>
-                                    <constraint firstAttribute="width" constant="73" id="YQx-SI-5fb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="states"/>
-                                <connections>
-                                    <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
-                                <rect key="frame" x="205" y="551" width="73" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="73e-Yb-9KJ"/>
-                                    <constraint firstAttribute="width" constant="73" id="vIr-YM-ewz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="songs"/>
-                                <connections>
-                                    <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kE3-hf-9uY" firstAttribute="leading" secondItem="B4I-S7-oBJ" secondAttribute="trailing" constant="62" id="00Y-p4-KJq"/>
-                            <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="BK0-5X-Hqv" secondAttribute="bottom" constant="8" id="149-9o-u3s"/>
-                            <constraint firstItem="B4I-S7-oBJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="9Zc-Np-ssm"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="B4I-S7-oBJ" secondAttribute="bottom" constant="72" id="BAH-jK-pM1"/>
-                            <constraint firstItem="dnK-Fd-TV7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="363" id="BKV-tK-MpZ"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="rFA-jZ-6cr" secondAttribute="bottom" constant="137" id="Bah-Gj-D8Q"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="26h-52-jom" secondAttribute="trailing" constant="242" id="E1c-v0-zMl"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Dya-yE-yw5" secondAttribute="bottom" constant="139" id="FUd-Js-O0Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BK0-5X-Hqv" secondAttribute="trailing" constant="73" id="IQ5-JR-e6J"/>
-                            <constraint firstItem="Ecs-9C-qyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="NyU-Ca-uIA"/>
-                            <constraint firstItem="rFA-jZ-6cr" firstAttribute="top" secondItem="dnK-Fd-TV7" secondAttribute="bottom" constant="27" id="POM-1x-wY8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dnK-Fd-TV7" secondAttribute="bottom" constant="210" id="Ps0-Lq-TJc"/>
-                            <constraint firstItem="Dya-yE-yw5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Q17-KY-hFA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dnK-Fd-TV7" secondAttribute="trailing" constant="73" id="SLY-5g-c7v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rFA-jZ-6cr" secondAttribute="trailing" constant="79" id="TR6-Qf-4bN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ecs-9C-qyB" secondAttribute="bottom" constant="20" id="TsN-4v-5K0"/>
-                            <constraint firstItem="26h-52-jom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UVy-91-PeO"/>
-                            <constraint firstItem="rFA-jZ-6cr" firstAttribute="leading" secondItem="Dya-yE-yw5" secondAttribute="trailing" constant="23" id="WWL-ng-5xj"/>
-                            <constraint firstItem="Ecs-9C-qyB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="553" id="Zce-9X-oNG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ecs-9C-qyB" secondAttribute="trailing" constant="169" id="cQt-zP-k5f"/>
-                            <constraint firstItem="kE3-hf-9uY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="487" id="eHv-xy-rp6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="26h-52-jom" secondAttribute="bottom" constant="210" id="eXJ-8P-qgS"/>
-                            <constraint firstItem="dnK-Fd-TV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="173" id="f4a-Ro-oSk"/>
-                            <constraint firstItem="Dya-yE-yw5" firstAttribute="top" secondItem="dnK-Fd-TV7" secondAttribute="bottom" constant="25" id="ftK-z5-hfg"/>
-                            <constraint firstItem="Ecs-9C-qyB" firstAttribute="top" secondItem="rFA-jZ-6cr" secondAttribute="bottom" constant="87" id="hNg-wZ-O4q"/>
-                            <constraint firstItem="Ecs-9C-qyB" firstAttribute="top" secondItem="BK0-5X-Hqv" secondAttribute="bottom" constant="205" id="lWR-1S-AKT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B4I-S7-oBJ" secondAttribute="trailing" constant="232" id="mOM-k3-9ZP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kE3-hf-9uY" secondAttribute="bottom" constant="70" id="mtm-j4-cRZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kE3-hf-9uY" secondAttribute="trailing" constant="97" id="mx0-s5-0cU"/>
-                            <constraint firstItem="rFA-jZ-6cr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="420" id="n8A-w3-di9"/>
-                            <constraint firstItem="rFA-jZ-6cr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="167" id="s3z-VF-O91"/>
-                            <constraint firstItem="BK0-5X-Hqv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="s4K-mu-i20"/>
-                            <constraint firstItem="Dya-yE-yw5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="418" id="sL6-Tg-ThP"/>
-                            <constraint firstItem="26h-52-jom" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="356" id="sYD-C4-ZIC"/>
-                            <constraint firstItem="B4I-S7-oBJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="485" id="vY1-Xf-FOp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dya-yE-yw5" secondAttribute="trailing" constant="215" id="x2t-od-Xy0"/>
+                            <constraint firstItem="gVK-gs-EOS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dvb-Am-qw3"/>
+                            <constraint firstItem="gVK-gs-EOS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PdU-cd-yi2"/>
+                            <constraint firstItem="gVK-gs-EOS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lfc-kc-TD8"/>
+                            <constraint firstItem="gVK-gs-EOS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tKI-5a-6dY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="y2Q-dD-uWu"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="750"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="476" y="133.13343328335833"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="key-WO-OTg">
@@ -333,14 +303,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g82-Kv-QY5">
-                                <rect key="frame" x="0.0" y="155" width="375" height="512"/>
+                                <rect key="frame" x="0.0" y="111" width="375" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Pick a category that interests you. A three second count down will begin. Place your phone on your head, with the screen facing your friends. Friends will give you clues to the word. If you guess the word correctly, tap the left side. If you wish to pass, tap the right side. After 45 seconds the game will end. Enjoy!</string>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jre-QK-eMt">
-                                <rect key="frame" x="114" y="101" width="146" height="40"/>
+                                <rect key="frame" x="114" y="57" width="146" height="84"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -715,7 +685,4 @@
             <point key="canvasLocation" x="2062" y="134"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="charades pic" width="630" height="630"/>
-    </resources>
 </document>
