@@ -48,18 +48,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
        
         
         gameLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
             
-    }
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "animalSegue" {
-            buttonTag = 1
-        } else if segue.identifier == "celebritySegue" {
-            buttonTag = 2
-        }
     }
 
     @IBAction func tapGestureRecognizer(_ sender: UITapGestureRecognizer) {
