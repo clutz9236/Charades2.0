@@ -39,7 +39,7 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }()
     var cellId = "cell"
     
-    let songs =  [""]
+    let songs =  ["Party in the USA", "Hollaback Girl", "Turn Up the Music", "All Star", "Beautiful Soul", "Your Love Is My Drug", "So What", "Sk8ter Boi", "Gold Digger", "Crazy in Love", "Ridin' Solo", "Single Ladies", "Dirty Little Secret", "Hot N Cold", "Stacy's Mom", "Fergalicious", "Bye, Bye, Bye", "Sugar, We're Goin Down", "1985", "Mr. Brightside", "Call Me Maybe", "Over My Head", "Wannabe", "Hall of Fame", "You Belong With Me", "Baby", "Year 3000", "Pokerface", "I'm a Believer", "Set Fire to the Rain", "Hey Soul Sister", "Everybody Talks", "Airplanes", "Baby Got Back", "I Wanna Dance with Somebody", "Hips Don't Lie", "Oops... I Did It Again", "I Want It That Way", "Super Bass", "California Girls", "Since You Been Gone", "How to Save a Life", "Want U Back", "Sweet Carolina", "Love the Way You Lie", "The Middle", "Ride with Me", "Potential Break Up Song", "Viva La Vida", "A Thousand Miles"]
     
     
     
@@ -95,7 +95,6 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
@@ -107,7 +106,7 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var songs = [""]
+        var songs = ["Party in the USA", "Hollaback Girl", "Turn Up the Music", "All Star", "Beautiful Soul", "Your Love Is My Drug", "So What", "Sk8ter Boi", "Gold Digger", "Crazy in Love", "Ridin' Solo", "Single Ladies", "Dirty Little Secret", "Hot N Cold", "Stacy's Mom", "Fergalicious", "Bye, Bye, Bye", "Sugar, We're Goin Down", "1985", "Mr. Brightside", "Call Me Maybe", "Over My Head", "Wannabe", "Hall of Fame", "You Belong With Me", "Baby", "Year 3000", "Pokerface", "I'm a Believer", "Set Fire to the Rain", "Hey Soul Sister", "Everybody Talks", "Airplanes", "Baby Got Back", "I Wanna Dance with Somebody", "Hips Don't Lie", "Oops... I Did It Again", "I Want It That Way", "Super Bass", "California Girls", "Since You Been Gone", "How to Save a Life", "Want U Back", "Sweet Carolina", "Love the Way You Lie", "The Middle", "Ride with Me", "Potential Break Up Song", "Viva La Vida", "A Thousand Miles"]
         var upperLimit = songs.count
         
         for _ in 1...songs.count {
@@ -153,9 +152,8 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         newWord(shuffling: shuffleArray())
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
-        tapGestureOutlet.isEnabled = true
-        tapStack.isUserInteractionEnabled = true
         tapStack.addGestureRecognizer(tapGestureOutlet)
+        tapStack.isUserInteractionEnabled = true
     }
     
     
