@@ -569,7 +569,7 @@
                         <outlet property="correctAnswer" destination="gzu-Fu-DUr" id="XX1-SN-pzw"/>
                         <outlet property="gameLabel" destination="7CS-9P-v7x" id="IZO-mh-qhU"/>
                         <outlet property="startGameOutlet" destination="hnO-W2-Ktl" id="aTd-Z6-v2O"/>
-                        <outlet property="tapGestureOutlet" destination="RLS-Lf-6Eg" id="V1d-0y-xpE"/>
+                        <outlet property="tapGestureOutlet" destination="rLj-IM-th2" id="WE4-Jn-xyi"/>
                         <outlet property="tapStack" destination="rWg-dR-dCv" id="bSU-O9-GKt"/>
                     </connections>
                 </viewController>
@@ -652,7 +652,7 @@
                         <outlet property="correctAnswer" destination="X3s-gt-IAu" id="SAc-7P-SM1"/>
                         <outlet property="gameLabel" destination="cVd-zN-6sb" id="gxY-Q2-UkX"/>
                         <outlet property="startGameOutlet" destination="fR1-uJ-QMO" id="tUr-Cx-Lg3"/>
-                        <outlet property="tapGestureOutlet" destination="RLS-Lf-6Eg" id="EOA-BS-TbZ"/>
+                        <outlet property="tapGestureOutlet" destination="U7B-cD-qjy" id="dEx-Oe-5Hg"/>
                         <outlet property="tapStack" destination="ZWr-Ee-Nma" id="gqC-ua-ehm"/>
                     </connections>
                 </viewController>
