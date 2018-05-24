@@ -111,8 +111,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3gP-MJ-ia8">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Category!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-sM-bjU">
+                                                <rect key="frame" x="131.5" y="0.0" width="112" height="97"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
-                                                <rect key="frame" x="131" y="0.0" width="113" height="113"/>
+                                                <rect key="frame" x="131" y="97" width="113" height="96.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Avengers"/>
                                                 <connections>
@@ -120,15 +126,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
-                                                <rect key="frame" x="151" y="113" width="73" height="113"/>
+                                                <rect key="frame" x="149" y="193.5" width="77" height="97"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="songs"/>
+                                                <state key="normal" title="Songs"/>
                                                 <connections>
                                                     <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
-                                                <rect key="frame" x="123" y="226" width="129" height="113"/>
+                                                <rect key="frame" x="123" y="290.5" width="129" height="97"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Celebrities"/>
                                                 <connections>
@@ -136,15 +142,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
-                                                <rect key="frame" x="151" y="339" width="73" height="113"/>
+                                                <rect key="frame" x="149" y="387.5" width="77" height="97"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="states"/>
+                                                <state key="normal" title="States"/>
                                                 <connections>
                                                     <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
-                                                <rect key="frame" x="115.5" y="452" width="144" height="113"/>
+                                                <rect key="frame" x="115.5" y="484.5" width="144" height="96.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Harry Potter"/>
                                                 <connections>
@@ -152,7 +158,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
-                                                <rect key="frame" x="139.5" y="565" width="96" height="113"/>
+                                                <rect key="frame" x="139.5" y="581" width="96" height="97"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Animals"/>
                                                 <connections>
