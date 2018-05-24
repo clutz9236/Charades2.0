@@ -10,6 +10,8 @@
 		306F1DCE20AC8C820048B16C /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F1DCD20AC8C820048B16C /* music.mp3 */; };
 		30A6576220AF34A8009AE636 /* Potter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30A6576120AF34A8009AE636 /* Potter.mp3 */; };
 		30AB079620B479A70063321C /* music copy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30AB079520B479A60063321C /* music copy.mp3 */; };
+		30BAA7B920B71E7C003D0C39 /* Avengers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30BAA7B820B71E7C003D0C39 /* Avengers.mp3 */; };
+		30BAA7BB20B720E4003D0C39 /* US.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30BAA7BA20B720E4003D0C39 /* US.mp3 */; };
 		6F922CE7208A4F36008E28F9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F922CE6208A4F36008E28F9 /* GameViewController.swift */; };
 		6FEA5CB120B476CC005D9BCA /* AvengersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEA5CB020B476CC005D9BCA /* AvengersViewController.swift */; };
 		AB02FE0520B5CDD70056A218 /* blankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02FE0420B5CDD70056A218 /* blankViewController.swift */; };
@@ -29,6 +31,8 @@
 		306F1DCD20AC8C820048B16C /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		30A6576120AF34A8009AE636 /* Potter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Potter.mp3; sourceTree = "<group>"; };
 		30AB079520B479A60063321C /* music copy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "music copy.mp3"; sourceTree = "<group>"; };
+		30BAA7B820B71E7C003D0C39 /* Avengers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Avengers.mp3; sourceTree = "<group>"; };
+		30BAA7BA20B720E4003D0C39 /* US.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = US.mp3; sourceTree = "<group>"; };
 		6F922CE6208A4F36008E28F9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6FEA5CB020B476CC005D9BCA /* AvengersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersViewController.swift; sourceTree = "<group>"; };
 		AB02FE0420B5CDD70056A218 /* blankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blankViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */,
 				E3625EC12088F67400785A88 /* Main.storyboard */,
 				30AB079520B479A60063321C /* music copy.mp3 */,
+				30BAA7B820B71E7C003D0C39 /* Avengers.mp3 */,
+				30BAA7BA20B720E4003D0C39 /* US.mp3 */,
 				306F1DCD20AC8C820048B16C /* music.mp3 */,
 				30A6576120AF34A8009AE636 /* Potter.mp3 */,
 				E3625EC42088F67400785A88 /* Assets.xcassets */,
@@ -160,6 +166,8 @@
 				E3625EC82088F67400785A88 /* LaunchScreen.storyboard in Resources */,
 				30AB079620B479A70063321C /* music copy.mp3 in Resources */,
 				E3625EC52088F67400785A88 /* Assets.xcassets in Resources */,
+				30BAA7BB20B720E4003D0C39 /* US.mp3 in Resources */,
+				30BAA7B920B71E7C003D0C39 /* Avengers.mp3 in Resources */,
 				E3625EC32088F67400785A88 /* Main.storyboard in Resources */,
 				30A6576220AF34A8009AE636 /* Potter.mp3 in Resources */,
 			);

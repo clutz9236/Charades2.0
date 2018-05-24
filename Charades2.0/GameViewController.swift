@@ -95,7 +95,6 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         correctAnswer.isHidden = false
         gameLabel.isHidden = true
         TimerLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
