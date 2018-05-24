@@ -48,7 +48,6 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         gameLabel.isHidden = true
-        tapGestureOutlet.isEnabled = false
         tapStack.isUserInteractionEnabled = false
         correctAnswer.isHidden = true
         
