@@ -152,6 +152,7 @@ class statesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         newWord(shuffling: shuffleArray())
         startGameOutlet.isHidden = true
         gameLabel.isHidden = false
+        tapGestureOutlet.isEnabled = true
         tapStack.isUserInteractionEnabled = true
         tapStack.addGestureRecognizer(tapGestureOutlet)
     }
