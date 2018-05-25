@@ -21,3 +21,16 @@ struct WhichArray {
     
     let movies = ["Titanic", "The Godfather", "Star Wars", "The Wizard of Oz", "Jaws", "Rocky", "Gone with the Wind", "Psycho", "The Terminator", "King Kong", "Jurassic Park", "Casablanca", "Back to the Future" ,"Raiders of the Lost Ark", "E.T.", "The Matrix", "Ferris Bueller's Day Off", "The Silence of the Lambs", "Citizen Kane", "High School Musical", "Cadet Kelly", "The Princess Bride", "The Shining", "Pulp Ficiton", "Top Gun", "Ghostbusters", "Forrest Gump", "Mission: Impossible", "Lady and the Tramp", "The Lion King", "Beauty and the Beast", "Saturday Night Fever", "Remember the Titans", "Avengers", "Harry Potter", "Caddyshack", "Dirty Dancing", "The Lord of the Rings", "Die Hard", "Toy Story", "Superman", "Singin' in the Rain", "A Christmas Story", "Rain Man", "The Sound of Music", "Edward Scissorhands", "Schindler's List", "Groundhog Day", "Mean Girls", "Blade Runner", "Poltergeist", "Scream", "I Know What You Did Last Summer", "Grease", "West Side Story", "Footloose", "It's a Wonderful Life", "The Sandlot", "Saving Private Ryan", "The Shawshank Redemption", "The Breakfast Club", "Sixteen Candles", "Planet of the Apes", "The Dark Knight", "10 Things I Hate About You", "The Exorcist", "Mary Poppins", "Rebel Without a Cause", "Apollo 13", "Willy Wonka and the Chocolate Factory", "Breakfast at Tiffany's", "Snow White and the Seven Dwarves", "Herbie Fully Loaded", "The Parent Trap", "Bambi", "Carrie", "Rudy", "Clueless", "Home Alone", "Pirates of the Caribbean", "V for Vendetta", "Finding Nemo", "Finding Dory", "Mrs. Doubtfire", "Peter Pan", "Jumanji", "Good Will Hunting", "Shrek", "Heathers", "Men in Black", "Deadpool", "The Truman Show"]
 }
+
+    let colors = ["Pink", "Purple", "Blue", "Yellow", "Orange", "Black", "Gray", "Green", "Absolute Zero", "Acajou", "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue", "Air Superiority Blue", "Alabama Crimson", "Alabaster", "Alice Blue", "Alizarin Crimson", "Alloy Orange", "Almond", "Aluminum", "Amaranth", "Amazon", "Amber", "American blue", "American bronze", "American gold", "American green", "Amethyst", "Android green", "Anti-flash White", "Antique Brass", "Apple", "Apricot", "Aqua", "Aquamarine", "Arctic Lime", "Artichoke", "Arylide Yellow", "Ash Gray", "Aureolin", "Avocado", "Awesome", "Azure", "Azureish White", "Banana Yellow", "Banana Mania", "Baby Powder", "Barbie Pink", "Barn Red", "Battery Charged Blue", "Bittersweet Shimmer", "Black Shadows", "Blue-violet", "Brick Red", "Bright Yellow", "Bubble Gum", "Brunswick Green", "Cardinal", "Chestnut", "Cheese", "Coral", "Crimson", "Dandelion"]
+
+
+
+
+
+
+
+
+
+
+
