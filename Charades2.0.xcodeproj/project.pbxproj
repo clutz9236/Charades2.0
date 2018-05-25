@@ -14,7 +14,8 @@
 		30BAA7BB20B720E4003D0C39 /* US.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30BAA7BA20B720E4003D0C39 /* US.mp3 */; };
 		6F922CE7208A4F36008E28F9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F922CE6208A4F36008E28F9 /* GameViewController.swift */; };
 		6FEA5CB120B476CC005D9BCA /* AvengersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEA5CB020B476CC005D9BCA /* AvengersViewController.swift */; };
-		AB02FE0520B5CDD70056A218 /* blankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02FE0420B5CDD70056A218 /* blankViewController.swift */; };
+		AB02FE0520B5CDD70056A218 /* moviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB02FE0420B5CDD70056A218 /* moviesVC.swift */; };
+		AB7B9BAE20B874D900765C02 /* colorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B9BAD20B874D900765C02 /* colorsViewController.swift */; };
 		AB84038020B5CD1400426401 /* songsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB84037F20B5CD1400426401 /* songsViewController.swift */; };
 		ABA66BB620B5CA500079DF15 /* statesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA66BB520B5CA500079DF15 /* statesViewController.swift */; };
 		ABAB380D20B32916004AF50D /* HarryPotterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAB380C20B32916004AF50D /* HarryPotterVC.swift */; };
@@ -35,7 +36,8 @@
 		30BAA7BA20B720E4003D0C39 /* US.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = US.mp3; sourceTree = "<group>"; };
 		6F922CE6208A4F36008E28F9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6FEA5CB020B476CC005D9BCA /* AvengersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengersViewController.swift; sourceTree = "<group>"; };
-		AB02FE0420B5CDD70056A218 /* blankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blankViewController.swift; sourceTree = "<group>"; };
+		AB02FE0420B5CDD70056A218 /* moviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviesVC.swift; sourceTree = "<group>"; };
+		AB7B9BAD20B874D900765C02 /* colorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsViewController.swift; sourceTree = "<group>"; };
 		AB84037F20B5CD1400426401 /* songsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songsViewController.swift; sourceTree = "<group>"; };
 		ABA66BB520B5CA500079DF15 /* statesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = statesViewController.swift; sourceTree = "<group>"; };
 		ABAB380C20B32916004AF50D /* HarryPotterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterVC.swift; sourceTree = "<group>"; };
@@ -82,12 +84,14 @@
 			children = (
 				E3625EBD2088F67400785A88 /* AppDelegate.swift */,
 				E3625EBF2088F67400785A88 /* ViewController.swift */,
+				AB7B9BAD20B874D900765C02 /* colorsViewController.swift */,
 				ABA66BB520B5CA500079DF15 /* statesViewController.swift */,
 				ABAB380C20B32916004AF50D /* HarryPotterVC.swift */,
 				6FEA5CB020B476CC005D9BCA /* AvengersViewController.swift */,
 				AB84037F20B5CD1400426401 /* songsViewController.swift */,
 				6F922CE6208A4F36008E28F9 /* GameViewController.swift */,
 				ABD7ABB020AB3B120064A3F6 /* game.swift */,
+				AB02FE0420B5CDD70056A218 /* moviesVC.swift */,
 				E398C001209A1BA1000797D5 /* CelebritiesViewController.swift */,
 				E3625EC12088F67400785A88 /* Main.storyboard */,
 				30AB079520B479A60063321C /* music copy.mp3 */,
@@ -98,7 +102,6 @@
 				E3625EC42088F67400785A88 /* Assets.xcassets */,
 				E3625EC62088F67400785A88 /* LaunchScreen.storyboard */,
 				E3625EC92088F67400785A88 /* Info.plist */,
-				AB02FE0420B5CDD70056A218 /* blankViewController.swift */,
 			);
 			path = Charades2.0;
 			sourceTree = "<group>";
@@ -185,7 +188,8 @@
 				6FEA5CB120B476CC005D9BCA /* AvengersViewController.swift in Sources */,
 				E3625EC02088F67400785A88 /* ViewController.swift in Sources */,
 				6F922CE7208A4F36008E28F9 /* GameViewController.swift in Sources */,
-				AB02FE0520B5CDD70056A218 /* blankViewController.swift in Sources */,
+				AB02FE0520B5CDD70056A218 /* moviesVC.swift in Sources */,
+				AB7B9BAE20B874D900765C02 /* colorsViewController.swift in Sources */,
 				ABD7ABB120AB3B120064A3F6 /* game.swift in Sources */,
 				ABAB380D20B32916004AF50D /* HarryPotterVC.swift in Sources */,
 				E3625EBE2088F67400785A88 /* AppDelegate.swift in Sources */,

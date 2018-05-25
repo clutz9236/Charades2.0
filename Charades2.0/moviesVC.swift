@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class blankViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class moviesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var player:AVAudioPlayer = AVAudioPlayer()
     
     
