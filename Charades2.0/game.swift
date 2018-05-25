@@ -21,3 +21,16 @@ struct WhichArray {
     
     let movies = ["Titanic", ""]
 }
+
+    let colors = ["Pink", "Purple", "Blue", "Yellow", "Orange", "Black", "Gray", "Green", "Absolute Zero", "Acajou", "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue", "Air Superiority Blue", "Alabama Crimson", "Alabaster", "Alice Blue", "Alizarin Crimson", "Alloy Orange", "Almond", "Aluminum", "Amaranth", "Amazon", "Amber", "American blue", "American bronze", "American gold", "American green", "Amethyst", "Android green", "Anti-flash White", "Antique brass", "Apple", "Apricot", "Aqua", "Aquamarine", "Arctic lime", "Artichoke", "Arylide yellow", "Ash gray", "Aureolin", "Avocado", "Awesome", "Azure", "Azureish white", "Banana yellow", "Banana Mania", "Baby powder", "Barbie Pink", "Barn red", "Battery charged blue", "Bittersweet shimmer", "Black Shadows", "Blue-violet", "Brick red", "Bright yellow", "Bubble gum", "Brunswick green", "Cardinal", "Chestnut", "Cheese", "Coral", "Crimson", "Dandelion"]
+
+
+
+
+
+
+
+
+
+
+
