@@ -166,9 +166,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-nV-iQx">
-                                                <rect key="frame" x="150.5" y="527.5" width="74" height="75"/>
+                                                <rect key="frame" x="148" y="527.5" width="79" height="75"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="colors"/>
+                                                <state key="normal" title="Colors"/>
                                                 <connections>
                                                     <segue destination="r1G-lC-BIn" kind="show" id="v9S-5L-IOZ"/>
                                                 </connections>
