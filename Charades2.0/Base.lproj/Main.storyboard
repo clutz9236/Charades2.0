@@ -114,10 +114,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r70-sW-6fV">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="678"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
+                                                    <button contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
                                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="113"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Avengers"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Avengers" image="avengers" backgroundImage="avengers"/>
                                                         <connections>
                                                             <segue destination="9EB-PK-gK1" kind="show" id="w0W-Tc-AF2"/>
                                                         </connections>
@@ -125,31 +125,34 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
                                                         <rect key="frame" x="0.0" y="113" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Celebrities"/>
+                                                        <state key="normal" backgroundImage="celebrity"/>
                                                         <connections>
                                                             <segue destination="CaM-0A-KHK" kind="show" id="Bdw-3O-aki"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
                                                         <rect key="frame" x="0.0" y="226" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="States"/>
+                                                        <state key="normal" title="States" backgroundImage="states">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
                                                         <rect key="frame" x="0.0" y="339" width="187.5" height="113"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Harry Potter"/>
+                                                        <state key="normal" title="Harry Potter" image="harryPotter"/>
                                                         <connections>
                                                             <segue destination="cTp-2a-af4" kind="show" identifier="harryPotterSegue" id="wmF-Bm-gvY"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7y-ok-iwR">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7y-ok-iwR">
                                                         <rect key="frame" x="0.0" y="452" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Presidents"/>
+                                                        <state key="normal" title="Presidents" backgroundImage="president">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="fc5-WG-5Wn" kind="show" id="Le6-Mn-fVa"/>
                                                         </connections>
@@ -157,7 +160,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-nV-iQx">
                                                         <rect key="frame" x="0.0" y="565" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="colors"/>
+                                                        <state key="normal" title="colors" backgroundImage="colors">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="r1G-lC-BIn" kind="show" id="v9S-5L-IOZ"/>
                                                         </connections>
@@ -167,51 +172,63 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sG-3o-RCx">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="678"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-Vd-lgl">
-                                                        <rect key="frame" x="18.5" y="0.0" width="151" height="113"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-Vd-lgl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Sports Team"/>
+                                                        <state key="normal" title="Sports Team" backgroundImage="Sports">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="owO-le-AUj" kind="show" id="Jr1-FC-nK3"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k86-iX-nRX">
-                                                        <rect key="frame" x="50.5" y="113" width="87" height="113"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k86-iX-nRX">
+                                                        <rect key="frame" x="0.0" y="113" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Movies"/>
+                                                        <state key="normal" title="Movies" backgroundImage="movie">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="eUO-fh-ySe" kind="show" id="Ztt-yh-R6B"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQT-3F-X7e">
-                                                        <rect key="frame" x="57" y="226" width="74" height="113"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="books"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQT-3F-X7e">
+                                                        <rect key="frame" x="0.0" y="226" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="authors" backgroundImage="books">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="k0E-Dg-6jH" kind="show" id="khO-O5-yKp"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-NG-VgC">
-                                                        <rect key="frame" x="35.5" y="339" width="117" height="113"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-NG-VgC">
+                                                        <rect key="frame" x="0.0" y="339" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Countries"/>
+                                                        <state key="normal" title="Countries" backgroundImage="countries">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="dEY-Rp-9PP" kind="show" id="4Gn-Iz-0Zd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
-                                                        <rect key="frame" x="46" y="452" width="96" height="113"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
+                                                        <rect key="frame" x="0.0" y="452" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Animals"/>
+                                                        <state key="normal" title="Animals" backgroundImage="animals">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
                                                             <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
-                                                        <rect key="frame" x="55.5" y="565" width="77" height="113"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
+                                                        <rect key="frame" x="0.0" y="565" width="187.5" height="113"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                        <state key="normal" title="Songs"/>
+                                                        <state key="normal" title="Songs" backgroundImage="songs">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
                                                         </connections>
@@ -1239,4 +1256,18 @@
             <point key="canvasLocation" x="3572" y="-584"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sports" width="800" height="400"/>
+        <image name="animals" width="320" height="320"/>
+        <image name="avengers" width="1280" height="720"/>
+        <image name="books" width="200" height="200"/>
+        <image name="celebrity" width="544" height="302"/>
+        <image name="colors" width="200" height="200"/>
+        <image name="countries" width="200" height="200"/>
+        <image name="harryPotter" width="200" height="200"/>
+        <image name="movie" width="289" height="235"/>
+        <image name="president" width="200" height="200"/>
+        <image name="songs" width="225" height="225"/>
+        <image name="states" width="200" height="200"/>
+    </resources>
 </document>
