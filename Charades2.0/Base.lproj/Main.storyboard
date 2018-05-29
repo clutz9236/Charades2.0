@@ -108,95 +108,122 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-gs-EOS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3gP-MJ-ia8">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3gP-MJ-ia8">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Category!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-sM-bjU">
-                                                <rect key="frame" x="56" y="0.0" width="263" height="61.5"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
-                                                <rect key="frame" x="131" y="61.5" width="113" height="62"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Avengers"/>
-                                                <connections>
-                                                    <segue destination="9EB-PK-gK1" kind="show" id="w0W-Tc-AF2"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
-                                                <rect key="frame" x="149" y="123.5" width="77" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Songs"/>
-                                                <connections>
-                                                    <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
-                                                <rect key="frame" x="123" y="185" width="129" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Celebrities"/>
-                                                <connections>
-                                                    <segue destination="CaM-0A-KHK" kind="show" id="Bdw-3O-aki"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
-                                                <rect key="frame" x="149" y="246.5" width="77" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="States"/>
-                                                <connections>
-                                                    <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
-                                                <rect key="frame" x="115.5" y="308" width="144" height="62"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Harry Potter"/>
-                                                <connections>
-                                                    <segue destination="cTp-2a-af4" kind="show" identifier="harryPotterSegue" id="wmF-Bm-gvY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k86-iX-nRX">
-                                                <rect key="frame" x="144" y="370" width="87" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Movies"/>
-                                                <connections>
-                                                    <segue destination="eUO-fh-ySe" kind="show" id="Ztt-yh-R6B"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-Vd-lgl">
-                                                <rect key="frame" x="112" y="431.5" width="151" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Sports Team"/>
-                                                <connections>
-                                                    <segue destination="owO-le-AUj" kind="show" id="Jr1-FC-nK3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-UY-iEM">
-                                                <rect key="frame" x="148" y="493" width="79" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Colors"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-nV-iQx">
-                                                <rect key="frame" x="150.5" y="554.5" width="74" height="62"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="colors"/>
-                                                <connections>
-                                                    <segue destination="r1G-lC-BIn" kind="show" id="v9S-5L-IOZ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
-                                                <rect key="frame" x="139.5" y="616.5" width="96" height="61.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Animals"/>
-                                                <connections>
-                                                    <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
-                                                    <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r70-sW-6fV">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="678"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFA-jZ-6cr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Avengers"/>
+                                                        <connections>
+                                                            <segue destination="9EB-PK-gK1" kind="show" id="w0W-Tc-AF2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-Fd-TV7">
+                                                        <rect key="frame" x="0.0" y="113" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Celebrities"/>
+                                                        <connections>
+                                                            <segue destination="CaM-0A-KHK" kind="show" id="Bdw-3O-aki"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4I-S7-oBJ">
+                                                        <rect key="frame" x="0.0" y="226" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="States"/>
+                                                        <connections>
+                                                            <segue destination="MVG-YC-6mQ" kind="show" id="NiY-my-YRk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-yE-yw5">
+                                                        <rect key="frame" x="0.0" y="339" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Harry Potter"/>
+                                                        <connections>
+                                                            <segue destination="cTp-2a-af4" kind="show" identifier="harryPotterSegue" id="wmF-Bm-gvY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7y-ok-iwR">
+                                                        <rect key="frame" x="0.0" y="452" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Presidents"/>
+                                                        <connections>
+                                                            <segue destination="fc5-WG-5Wn" kind="show" id="Le6-Mn-fVa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-nV-iQx">
+                                                        <rect key="frame" x="0.0" y="565" width="187.5" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="colors"/>
+                                                        <connections>
+                                                            <segue destination="r1G-lC-BIn" kind="show" id="v9S-5L-IOZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6sG-3o-RCx">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="678"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-Vd-lgl">
+                                                        <rect key="frame" x="18.5" y="0.0" width="151" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Sports Team"/>
+                                                        <connections>
+                                                            <segue destination="owO-le-AUj" kind="show" id="Jr1-FC-nK3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k86-iX-nRX">
+                                                        <rect key="frame" x="50.5" y="113" width="87" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Movies"/>
+                                                        <connections>
+                                                            <segue destination="eUO-fh-ySe" kind="show" id="Ztt-yh-R6B"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQT-3F-X7e">
+                                                        <rect key="frame" x="57" y="226" width="74" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="books"/>
+                                                        <connections>
+                                                            <segue destination="k0E-Dg-6jH" kind="show" id="khO-O5-yKp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaM-NG-VgC">
+                                                        <rect key="frame" x="35.5" y="339" width="117" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Countries"/>
+                                                        <connections>
+                                                            <segue destination="dEY-Rp-9PP" kind="show" id="4Gn-Iz-0Zd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26h-52-jom">
+                                                        <rect key="frame" x="46" y="452" width="96" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Animals"/>
+                                                        <connections>
+                                                            <action selector="animalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JWS-Of-WSY"/>
+                                                            <segue destination="A6Z-wc-ALp" kind="show" identifier="animalSegue" id="hRp-Og-QWd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-hf-9uY">
+                                                        <rect key="frame" x="55.5" y="565" width="77" height="113"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="Songs"/>
+                                                        <connections>
+                                                            <segue destination="xuR-c0-cPa" kind="show" id="uMV-7u-VPW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="r70-sW-6fV" secondAttribute="bottom" id="Esg-h3-JSq"/>
+                                            <constraint firstAttribute="trailing" secondItem="6sG-3o-RCx" secondAttribute="trailing" id="ZM7-BX-o4b"/>
+                                            <constraint firstItem="r70-sW-6fV" firstAttribute="leading" secondItem="3gP-MJ-ia8" secondAttribute="leading" id="a2G-vQ-0FI"/>
+                                            <constraint firstAttribute="bottom" secondItem="6sG-3o-RCx" secondAttribute="bottom" id="bHA-At-RUl"/>
                                             <constraint firstAttribute="height" constant="678" id="hTP-aU-npy"/>
                                         </constraints>
                                     </stackView>
@@ -209,6 +236,13 @@
                                     <constraint firstItem="3gP-MJ-ia8" firstAttribute="leading" secondItem="gVK-gs-EOS" secondAttribute="leading" id="pjz-VO-3ZW"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Category!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGG-sM-bjU">
+                                <rect key="frame" x="56" y="36" width="263" height="678"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.69146755680000005" green="1" blue="0.82055080859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -218,6 +252,11 @@
                             <constraint firstItem="gVK-gs-EOS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tKI-5a-6dY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cGG-sM-bjU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="y2Q-dD-uWu"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -854,7 +893,7 @@
                         <outlet property="correctAnswer" destination="slY-tS-W6A" id="4Ix-kd-sAF"/>
                         <outlet property="gameLabel" destination="3rN-K0-naJ" id="Mmn-Xb-d6F"/>
                         <outlet property="startGameOutlet" destination="Jch-kq-Frs" id="rJo-ad-sgZ"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="x1w-U3-9Ue"/>
+                        <outlet property="tapGestureOutlet" destination="Lap-yR-qeP" id="WUO-f2-bS8"/>
                         <outlet property="tapStack" destination="5Jl-bR-aSF" id="qI1-t6-VSr"/>
                     </connections>
                 </viewController>
@@ -867,10 +906,10 @@
             </objects>
             <point key="canvasLocation" x="2801" y="134"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Sports View Controller-->
         <scene sceneID="TBh-1m-iuS">
             <objects>
-                <viewController id="owO-le-AUj" customClass="GameViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="owO-le-AUj" customClass="sportsViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kqj-co-OC2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -937,7 +976,7 @@
                         <outlet property="correctAnswer" destination="bRr-dS-Mk8" id="Kn7-Yl-6WZ"/>
                         <outlet property="gameLabel" destination="uBY-a7-LIf" id="GJ4-PX-nf0"/>
                         <outlet property="startGameOutlet" destination="N66-bM-zOG" id="bKi-Vx-Txy"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="WMZ-ls-aOs"/>
+                        <outlet property="tapGestureOutlet" destination="NOS-NI-j7S" id="xrt-Ly-Zaa"/>
                         <outlet property="tapStack" destination="3X4-Tw-ml8" id="qhq-IZ-7BV"/>
                     </connections>
                 </viewController>
@@ -950,10 +989,10 @@
             </objects>
             <point key="canvasLocation" x="2801" y="857"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Presidents View Controller-->
         <scene sceneID="MF5-CQ-uNU">
             <objects>
-                <viewController id="fc5-WG-5Wn" customClass="GameViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fc5-WG-5Wn" customClass="presidentsViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnu-L9-9w0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -970,23 +1009,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-1S-9KO">
-                                <rect key="frame" x="104" y="45" width="167" height="162"/>
+                                <rect key="frame" x="104" y="89" width="167" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-hE-F3M">
-                                <rect key="frame" x="59" y="230" width="256" height="33"/>
+                                <rect key="frame" x="59" y="274" width="256" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-du-toX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjo-zT-0hd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1020,7 +1059,7 @@
                         <outlet property="correctAnswer" destination="Fjo-zT-0hd" id="I2X-Sr-dmE"/>
                         <outlet property="gameLabel" destination="dSp-hE-F3M" id="ucK-nY-HvA"/>
                         <outlet property="startGameOutlet" destination="vBb-6q-2FM" id="UZh-sH-fet"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="Cdo-dK-qqS"/>
+                        <outlet property="tapGestureOutlet" destination="2Qh-f8-vxb" id="teY-OL-zhE"/>
                         <outlet property="tapStack" destination="ltg-du-toX" id="aPa-eh-mvQ"/>
                     </connections>
                 </viewController>
@@ -1033,10 +1072,10 @@
             </objects>
             <point key="canvasLocation" x="3572" y="857"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Books View Controller-->
         <scene sceneID="kFz-t6-eZa">
             <objects>
-                <viewController id="k0E-Dg-6jH" customClass="GameViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k0E-Dg-6jH" customClass="booksViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5O-Yj-XUW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1053,23 +1092,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0a-2H-oN4">
-                                <rect key="frame" x="104" y="45" width="167" height="162"/>
+                                <rect key="frame" x="104" y="89" width="167" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gv-P8-CFF">
-                                <rect key="frame" x="59" y="230" width="256" height="33"/>
+                                <rect key="frame" x="59" y="274" width="256" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtQ-GH-KHE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2n-lc-XAj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1103,7 +1142,7 @@
                         <outlet property="correctAnswer" destination="t2n-lc-XAj" id="qtv-0j-GbR"/>
                         <outlet property="gameLabel" destination="1gv-P8-CFF" id="ZSo-Uq-z5l"/>
                         <outlet property="startGameOutlet" destination="g6v-DP-fgb" id="U0K-ev-wMH"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="PHl-7Y-BCX"/>
+                        <outlet property="tapGestureOutlet" destination="Eno-Rr-Wie" id="tfh-Kf-jbu"/>
                         <outlet property="tapStack" destination="mtQ-GH-KHE" id="NS6-S2-MT4"/>
                     </connections>
                 </viewController>
@@ -1116,10 +1155,10 @@
             </objects>
             <point key="canvasLocation" x="3572" y="134"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Countries View Controller-->
         <scene sceneID="vWa-hG-od0">
             <objects>
-                <viewController id="dEY-Rp-9PP" customClass="GameViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dEY-Rp-9PP" customClass="countriesViewController" customModule="Charades2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HHg-Hc-x5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1136,23 +1175,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5l3-2d-y7H">
-                                <rect key="frame" x="104" y="45" width="167" height="162"/>
+                                <rect key="frame" x="104" y="89" width="167" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiq-pL-EnY">
-                                <rect key="frame" x="59" y="230" width="256" height="33"/>
+                                <rect key="frame" x="59" y="274" width="256" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rky-R3-Sk0">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laP-QU-hXy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1186,7 +1225,7 @@
                         <outlet property="correctAnswer" destination="laP-QU-hXy" id="tfF-0C-qmy"/>
                         <outlet property="gameLabel" destination="yiq-pL-EnY" id="sfJ-6r-9eE"/>
                         <outlet property="startGameOutlet" destination="jus-mv-X45" id="Hk9-eH-uay"/>
-                        <outlet property="tapGestureOutlet" destination="6es-pg-8xz" id="TeJ-Wm-zhR"/>
+                        <outlet property="tapGestureOutlet" destination="ats-hu-yIk" id="sMP-e2-DYS"/>
                         <outlet property="tapStack" destination="rky-R3-Sk0" id="dGB-nh-rPJ"/>
                     </connections>
                 </viewController>
