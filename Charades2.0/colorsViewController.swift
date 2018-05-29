@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class colorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var player:AVAudioPlayer = AVAudioPlayer()
     
     
@@ -39,7 +39,9 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }()
     var cellId = "cell"
     
-    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
+   
+    let colors = ["Pink", "Purple", "Blue", "Yellow", "Orange", "Black", "Gray", "Green", "Absolute Zero", "Acajou", "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue", "Air Superiority Blue", "Alabama Crimson", "Alabaster", "Alice Blue", "Alizarin Crimson", "Alloy Orange", "Almond", "Aluminum", "Amaranth", "Amazon", "Amber", "American blue", "American bronze", "American gold", "American green", "Amethyst", "Android green", "Anti-flash White", "Antique Brass", "Apple", "Apricot", "Aqua", "Aquamarine", "Arctic Lime", "Artichoke", "Arylide Yellow", "Ash Gray", "Aureolin", "Avocado", "Awesome", "Azure", "Azureish White", "Banana Yellow", "Banana Mania", "Baby Powder", "Barbie Pink", "Barn Red", "Battery Charged Blue", "Bittersweet Shimmer", "Black Shadows", "Blue-violet", "Brick Red", "Bright Yellow", "Bubble Gum", "Brunswick Green", "Cardinal", "Chestnut", "Cheese", "Coral", "Crimson", "Dandelion"]
+
     
     
     
@@ -76,11 +78,10 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func newWord(shuffling: [String]) {
-        if AnimalWords.count > countTimesTapped {
+        if colors.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
-            print(shuffledAnimals)
         }
     }
     
@@ -106,13 +107,13 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
-        var upperLimit = AnimalWords.count
+        var colors = ["Pink", "Purple", "Blue", "Yellow", "Orange", "Black", "Gray", "Green", "Absolute Zero", "Acajou", "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue", "Air Superiority Blue", "Alabama Crimson", "Alabaster", "Alice Blue", "Alizarin Crimson", "Alloy Orange", "Almond", "Aluminum", "Amaranth", "Amazon", "Amber", "American blue", "American bronze", "American gold", "American green", "Amethyst", "Android green", "Anti-flash White", "Antique Brass", "Apple", "Apricot", "Aqua", "Aquamarine", "Arctic Lime", "Artichoke", "Arylide Yellow", "Ash Gray", "Aureolin", "Avocado", "Awesome", "Azure", "Azureish White", "Banana Yellow", "Banana Mania", "Baby Powder", "Barbie Pink", "Barn Red", "Battery Charged Blue", "Bittersweet Shimmer", "Black Shadows", "Blue-violet", "Brick Red", "Bright Yellow", "Bubble Gum", "Brunswick Green", "Cardinal", "Chestnut", "Cheese", "Coral", "Crimson", "Dandelion"]
+        var upperLimit = colors.count
         
-        for _ in 1...AnimalWords.count {
+        for _ in 1...colors.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledAnimals.append(colors[randomNumber])
+            colors.remove(at: randomNumber)
             upperLimit -= 1
         }
         return shuffledAnimals
