@@ -137,7 +137,7 @@ class songsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         {
             
-            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
+            let audioPath = Bundle.main.path(forResource: "mp3", ofType: "mp3")
             
             try self.player = AVAudioPlayer (contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             print("inside do")
