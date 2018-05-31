@@ -39,7 +39,7 @@ class newGirlViewController: UIViewController, UITableViewDelegate, UITableViewD
     }()
     var cellId = "cell"
     
-    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
+    let AnimalWords =  ["Jess", "Schmidt", "Ryan Geauxinue", "Coach", "Ruth", "Reagen", "Cece", "Winston", "Aly Nelson", "Abby Day", "Fawn Moscato", "May", "Kai", "Tran", "Bertie", "Mike", "Principal Foster", "Elizabeth", "Walt Miller", "Bob Day", "Robby", "Donovan", "Leslie Nelson", "Caroline", "Paul", "Sadie", "Remy", "Shelby", "Russell", "Joe Napoli", "Nadia"]
     
     
     
@@ -106,7 +106,7 @@ class newGirlViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
+        var AnimalWords =  ["Jess", "Schmidt", "Ryan Geauxinue", "Coach", "Ruth", "Reagen", "Cece", "Winston", "Aly Nelson", "Abby Day", "Fawn Moscato", "May", "Kai", "Tran", "Bertie", "Mike", "Principal Foster", "Elizabeth", "Walt Miller", "Bob Day", "Robby", "Donovan", "Leslie Nelson", "Caroline", "Paul", "Sadie", "Remy", "Shelby", "Russell", "Joe Napoli", "Nadia"]
         var upperLimit = AnimalWords.count
         
         for _ in 1...AnimalWords.count {
