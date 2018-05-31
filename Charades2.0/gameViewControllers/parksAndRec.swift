@@ -39,7 +39,7 @@ class parksAndRecViewController: UIViewController, UITableViewDelegate, UITableV
     }()
     var cellId = "cell"
     
-    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
+    let parksAndRec =  ["Jerry Gergich", "Councilman Bill Dexhart", "Councilman Jeremy Jamm", "Marcia Langman", "Marshall Langman", "Tammy Swanson Two", "Tammy Swanson One", "Bobby Newport", "Lawrence", "Jennifer Barkley", "Dennis Feinstein", "Joe Fantringhma", "Kim Terlando", "Mark Brandanawicz", "Craig Middlebrooks", "Eagleton", "Pawnee", "Lil' Sebastian", "Crazy Ira", "Dr. Saperstein", "Fielding Milton", "Frank Bekerson", "Marlene Knope", "Lindsay Carlisle Shay", "Typhoon Montalban", "Kelly Larson", "Chris the Doctor", "George Williams", "Kyle", "Paul Iaresco", "Dr. Harris", "Councilman Douglass Howser", "Carl Lorthner", "Hugh Trumple", "Ron Dunn", "Greg Pikitis", "Wendy Haverford", "Jessica Wicks", "Champion", "Tamara Swanson", "Justin Anderson", "Dave Sanderson", "Orin", "J.J.'s Diner", "Ken Hotate", "Wamapoke", "Shauna Malwae-Tweep", "Perd Hapley", "Joan Callamezzo", "Amy Pohler", "Mouse Rat", "Chris Pratt", "Diane Lewis", "Nick Offerman", "Mona-Lisa Spaerstein", "Jean-Ralphio Saperstein", "Ann Perkins", "Snakehole Lounge", "Harvest Festival", "Donna Meagle", "Tom Haverford", "Aziz Ansari", "Chris Traeger", "April Ludgate", "Ben Wyatt", "Cones of Dunshire", "Ron Swanson", "Leslie Knope", "Andy Dwyer", "Aubrey Plaza", "Adam Scott", "Rashida Jones", "Rob Loew", "Bil Eichner", "Jim O'Heir"]
     
     
     
@@ -76,7 +76,7 @@ class parksAndRecViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func newWord(shuffling: [String]) {
-        if AnimalWords.count > countTimesTapped {
+        if parksAndRec.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
@@ -106,13 +106,13 @@ class parksAndRecViewController: UIViewController, UITableViewDelegate, UITableV
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
-        var upperLimit = AnimalWords.count
+        var parksAndRec =  ["Jerry Gergich", "Councilman Bill Dexhart", "Councilman Jeremy Jamm", "Marcia Langman", "Marshall Langman", "Tammy Swanson Two", "Tammy Swanson One", "Bobby Newport", "Lawrence", "Jennifer Barkley", "Dennis Feinstein", "Joe Fantringhma", "Kim Terlando", "Mark Brandanawicz", "Craig Middlebrooks", "Eagleton", "Pawnee", "Lil' Sebastian", "Crazy Ira", "Dr. Saperstein", "Fielding Milton", "Frank Bekerson", "Marlene Knope", "Lindsay Carlisle Shay", "Typhoon Montalban", "Kelly Larson", "Chris the Doctor", "George Williams", "Kyle", "Paul Iaresco", "Dr. Harris", "Councilman Douglass Howser", "Carl Lorthner", "Hugh Trumple", "Ron Dunn", "Greg Pikitis", "Wendy Haverford", "Jessica Wicks", "Champion", "Tamara Swanson", "Justin Anderson", "Dave Sanderson", "Orin", "J.J.'s Diner", "Ken Hotate", "Wamapoke", "Shauna Malwae-Tweep", "Perd Hapley", "Joan Callamezzo", "Amy Pohler", "Mouse Rat", "Chris Pratt", "Diane Lewis", "Nick Offerman", "Mona-Lisa Spaerstein", "Jean-Ralphio Saperstein", "Ann Perkins", "Snakehole Lounge", "Harvest Festival", "Donna Meagle", "Tom Haverford", "Aziz Ansari", "Chris Traeger", "April Ludgate", "Ben Wyatt", "Cones of Dunshire", "Ron Swanson", "Leslie Knope", "Andy Dwyer", "Aubrey Plaza", "Adam Scott", "Rashida Jones", "Rob Loew", "Bil Eichner", "Jim O'Heir", "The Library"]
+        var upperLimit = parksAndRec.count
         
-        for _ in 1...AnimalWords.count {
+        for _ in 1...parksAndRec.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledAnimals.append(parksAndRec[randomNumber])
+            parksAndRec.remove(at: randomNumber)
             upperLimit -= 1
         }
         return shuffledAnimals
