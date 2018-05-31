@@ -39,7 +39,7 @@ class friendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }()
     var cellId = "cell"
     
-    let AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
+    let friends =  ["Insomnia Cafe", "Jennifer Aniston", "Rachel Green", "Courteney Cox", "Monica Geller", "Matthew Perry", "Chandler Bing", "Lisa Kudrow", "Phoebe Buffay", "Matt LeBlanc", "Joey Tribbiani", "David Schwimmer", "Ross Geller", "Cole Sprouse", "Ben Geller", "Dr. Drake Ramoray", "Days of Our Lives", "Ursula Buffay", "David the Scientist", "Marcel", "Central Perk", "Emma", "Estelle Leonard", "Carol Willick", "Susan Bunch", "Marta Kauffman", "Frank Buffay Jr.", "Gunther", "Jack Geller", "Judy Geller", "Janice Litman Goralnik", "Mr. Hekcles", "Paolo", "David", "Nora Tyler Bing", "Julie", "Mr. Treeger", "Dr. Richard Burke", "Alice Knight Buffay", "Kathy", "Emily Waltham", "Joshua Burgin", "Jill Green", "Erica", "Barry Farber", "Ugly Naked Guy", "Helena Handbasket"]
     
     
     
@@ -76,7 +76,7 @@ class friendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func newWord(shuffling: [String]) {
-        if AnimalWords.count > countTimesTapped {
+        if friends.count > countTimesTapped {
             gameLabel.text = shuffling[countTimesTapped]
         } else {
             giveAnswer()
@@ -106,13 +106,13 @@ class friendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func shuffleArray() -> [String] {
         var randomNumber: Int
-        var AnimalWords =  ["Llama", "Dog", "Fly", "Parrot", "Sheep", "Coyote", "Lion", "Zebra", "Cheetah", "Polar Bear", "Bear", "Owl", "Tiger", "Husky", "Panda", "Monkey", "Penguin", "Peacock", "Fox", "Dolphin", "Deer", "Chicken", "Turkey", "Pig", "Fish", "Rhino", "Cow", "Frog", "Bunny", "Wolf", "Porcupine", "Whale", "Kangaroo", "Cat", "Horse", "Snake", "Dragon", "Clownfish", "African Buffalo", "Alpaca", "Baboon", "Aardvark", "African Bush Elephant", "Elephant", "Alligator", "Tortoise", "Water Spaniel", "Antelope", "Hare", "Rabbit", "Hornet", "Badger", "Camel", "Barracuda", "Basset Hound", "Beaver", "Bison", "Black Widow", "Buffalo", "Bulldog", "Butterfly", "Capybara", "Caterpillar", "Centipede", "Chameleon", "Chihuahua", "Chipmunk", "Cougar", "Crocodile", "Donkey", "Eel", "Emu", "Falcon", "Flat Coat Retriever", "Flying Squirrel", "Gecko", "Giant African Land Snail", "Honey Bee", "Seal", "Guppy", "Shark", "Mouse", "Iguana", "Jaguar", "Jellyfish", "Komodo Dragon", "Octopus", "Opossum", "Mongoose", "Platypus", "Raccoon", "Swan", "Walrus", "Wooly Mammoth"]
-        var upperLimit = AnimalWords.count
+        var friends =  ["Insomnia Cafe", "Jennifer Aniston", "Rachel Green", "Courteney Cox", "Monica Geller", "Matthew Perry", "Chandler Bing", "Lisa Kudrow", "Phoebe Buffay", "Matt LeBlanc", "Joey Tribbiani", "David Schwimmer", "Ross Geller", "Cole Sprouse", "Ben Geller", "Dr. Drake Ramoray", "Days of Our Lives", "Ursula Buffay", "David the Scientist", "Marcel", "Central Perk", "Emma", "Estelle Leonard", "Carol Willick", "Susan Bunch", "Marta Kauffman", "Frank Buffay Jr.", "Gunther", "Jack Geller", "Judy Geller", "Janice Litman Goralnik", "Mr. Hekcles", "Paolo", "David", "Nora Tyler Bing", "Julie", "Mr. Treeger", "Dr. Richard Burke", "Alice Knight Buffay", "Kathy", "Emily Waltham", "Joshua Burgin", "Jill Green", "Erica", "Barry Farber", "Ugly Naked Guy", "Helena Handbasket"]
+        var upperLimit = friends.count
         
-        for _ in 1...AnimalWords.count {
+        for _ in 1...friends.count {
             randomNumber = Int(arc4random_uniform(UInt32(upperLimit)))
-            shuffledAnimals.append(AnimalWords[randomNumber])
-            AnimalWords.remove(at: randomNumber)
+            shuffledAnimals.append(friends[randomNumber])
+            friends.remove(at: randomNumber)
             upperLimit -= 1
         }
         return shuffledAnimals
